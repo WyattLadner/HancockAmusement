@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hancock Amusement — Commission Equipment, ATMs &amp; Leagues | South MS &amp; SE Louisiana</title>
+<meta name="description" content="Commission-based pool tables, dartboards, jukeboxes, arcade and ATM placement for bars and venues across South Mississippi and Southeast Louisiana. No upfront cost. Family owned.">
+<meta property="og:title" content="Hancock Amusement — Games That Pay For Themselves">
+<meta property="og:description" content="Commission-based amusement equipment and ATMs for bars and venues in South Mississippi and Southeast Louisiana. No upfront cost.">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#050C15',
+          surface: '#0A1422',
+          'surface-2': '#0F1D2E',
+          line: '#1C2E45',
+          red: '#F60B1A',
+          blue: '#3188F2',
+          chalk: '#F3F5F7',
+          smoke: '#919DAC'
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['"Barlow Condensed"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="bg-ink text-chalk font-sans antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-red focus:text-ink focus:px-4 focus:py-2 focus:rounded-md">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+      <img src="images/logo-header.png" alt="Hancock Amusement" width="105" height="55" class="h-10 md:h-12 w-auto">
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 font-display uppercase tracking-wide text-sm text-chalk" aria-label="Primary">
+      <a href="#services" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a>
+      <a href="#leagues" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a>
+      <a href="#service-area" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a>
+      <a href="#" data-phase2 class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">About</a>
+      <a href="#contact" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2 md:gap-3">
+      <a href="tel:+12284930845"
+         class="inline-flex items-center gap-2 bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-3 md:px-5 py-2.5 hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+         aria-label="Call Hancock Amusement at 228-493-0845">
+        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/></svg>
+        <span class="hidden sm:inline">228-493-0845</span>
+      </a>
+
+      <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"
+              class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-line text-chalk hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+        <span class="sr-only">Toggle menu</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="md:hidden hidden border-t border-line bg-ink" aria-label="Primary mobile">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-1 font-display uppercase tracking-wide text-base">
+      <a href="#services" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a>
+      <a href="#leagues" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a>
+      <a href="#service-area" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a>
+      <a href="#" data-phase2 class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">About</a>
+      <a href="#contact" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <img src="images/hero-bar-pool-night.jpg" alt="Pool table under warm pendant lights in a bar at night" class="absolute inset-0 w-full h-full object-cover" width="1600" height="900">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24 w-full">
+      <div class="max-w-2xl">
+        <p class="font-display uppercase tracking-wide text-sm md:text-base text-red mb-4">South Mississippi &amp; Southeast Louisiana · Family Owned</p>
+        <h1 class="font-display font-bold uppercase tracking-wide text-5xl md:text-7xl leading-[1.05] mb-5">Games that pay for themselves.</h1>
+        <p class="text-base md:text-lg leading-relaxed text-chalk/90 mb-8 max-w-xl">Pool tables, dartboards, jukeboxes and ATMs placed in your venue at no upfront cost. We install it, we service it, we split the revenue.</p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 text-center hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+            Put equipment in my venue →
+          </a>
+          <a href="wednesday-a-pool.html" class="inline-flex items-center justify-center border border-chalk/60 text-chalk font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 text-center hover:border-red hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+            League standings &amp; schedules →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="bg-surface border-y border-line">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+        <div>
+          <p class="font-display font-bold uppercase text-2xl md:text-3xl text-red tabular-nums">Family Owned</p>
+          <p class="text-sm text-smoke mt-1">and managed, not a franchise</p>
+        </div>
+        <div>
+          <p class="font-display font-bold uppercase text-2xl md:text-3xl text-red tabular-nums">2 States</p>
+          <p class="text-sm text-smoke mt-1">South MS &amp; Southeast LA</p>
+        </div>
+        <div>
+          <p class="font-display font-bold uppercase text-2xl md:text-3xl text-red tabular-nums">5 Leagues</p>
+          <p class="text-sm text-smoke mt-1">running weekly</p>
+        </div>
+        <div>
+          <p class="font-display font-bold uppercase text-2xl md:text-3xl text-red tabular-nums">$0 Upfront</p>
+          <p class="text-sm text-smoke mt-1">commission-based placement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUDIENCE SPLIT ============ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+
+        <div class="rounded-lg overflow-hidden border border-line bg-surface flex flex-col">
+          <div class="relative aspect-[4/3]">
+            <img src="images/venue-owners.jpg" alt="Busy bar floor from the owner's perspective" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-1">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-3">For Venue Owners</h3>
+            <p class="text-base leading-relaxed text-smoke mb-6 flex-1">More reasons to stay for another round. We handle equipment, permits, maintenance and collections — you keep the traffic and a share of every dollar.</p>
+            <a href="#contact" class="inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-red hover:text-red/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md w-fit">
+              See how commission works →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden border border-line bg-surface flex flex-col">
+          <div class="relative aspect-[4/3]">
+            <img src="images/league-players.jpg" alt="League night players around a table with a chalkboard scoreboard" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-1">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-3">For League Players</h3>
+            <p class="text-base leading-relaxed text-smoke mb-6 flex-1">Standings, schedules, rules and team contacts for all five leagues. Updated weekly, readable on your phone at the bar.</p>
+            <a href="wednesday-a-pool.html" class="inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-red hover:text-red/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md w-fit">
+              Find my league →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="py-16 md:py-24 bg-surface border-y border-line">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-10 md:mb-14">What We Do</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-commission.jpg" alt="Pool table installed in a venue" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">Commission Equipment</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">Pool tables, darts, jukeboxes and arcade placed in your venue at no cost to you.</p>
+          </div>
+        </article>
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-leasing.jpg" alt="Electronic dartboard cabinet" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">Sales &amp; Leasing</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">Buy or lease equipment outright, including ATM machines.</p>
+          </div>
+        </article>
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-atm.jpg" alt="ATM in a bar setting" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">ATM Machines</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">Keep cash on the floor and in your register. Sales, leasing and service.</p>
+          </div>
+        </article>
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-repairs.jpg" alt="Hands servicing a machine with tools visible" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">Game Repairs</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">Fast local service on any machine, whether we placed it or not.</p>
+          </div>
+        </article>
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-recovering.jpg" alt="Re-felting a pool table" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">Pool Table Recovering</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">New felt, professional leveling, done on site.</p>
+          </div>
+        </article>
+
+        <article class="rounded-lg overflow-hidden border border-line bg-surface-2">
+          <div class="relative aspect-video">
+            <img src="images/svc-rentals.jpg" alt="Games set up at a party or event" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="800" height="450">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl mb-2">Party &amp; Event Rentals</h3>
+            <p class="text-sm md:text-base text-smoke leading-relaxed">Short-term game rentals for parties, fundraisers and company events.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW COMMISSION WORKS ============ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-12 md:mb-16 text-center">No Cost To Put A Game In Your Bar</h2>
+
+      <div class="relative">
+        <div class="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-px bg-line" aria-hidden="true"></div>
+
+        <div class="grid gap-10 md:grid-cols-3">
+          <div class="relative text-center md:text-left">
+            <div class="relative z-10 w-16 h-16 mx-auto md:mx-0 rounded-lg bg-ink border border-line flex items-center justify-center font-display font-bold text-3xl text-red tabular-nums mb-5">1</div>
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-2">We install</h3>
+            <p class="text-base leading-relaxed text-smoke">We assess your floor space and traffic, recommend the right mix, deliver and set up. No purchase, no lease, no upfront cost.</p>
+          </div>
+          <div class="relative text-center md:text-left">
+            <div class="relative z-10 w-16 h-16 mx-auto md:mx-0 rounded-lg bg-ink border border-line flex items-center justify-center font-display font-bold text-3xl text-red tabular-nums mb-5">2</div>
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-2">You host</h3>
+            <p class="text-base leading-relaxed text-smoke">The equipment earns while your customers play. We handle permits, licensing and compliance.</p>
+          </div>
+          <div class="relative text-center md:text-left">
+            <div class="relative z-10 w-16 h-16 mx-auto md:mx-0 rounded-lg bg-ink border border-line flex items-center justify-center font-display font-bold text-3xl text-red tabular-nums mb-5">3</div>
+            <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-2">We split and maintain</h3>
+            <p class="text-base leading-relaxed text-smoke">We collect on a regular schedule, split the revenue with you, and repair anything that breaks at no charge to you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 md:mt-16">
+        <a href="tel:+12284930845" class="inline-flex items-center justify-center bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+          Talk to Michael → 228-493-0845
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEAGUES ============ -->
+  <section id="leagues" class="py-16 md:py-24 bg-surface border-y border-line">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-10 md:mb-14">Weekly Leagues</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+        <a href="#" data-phase2 class="group rounded-lg border border-line bg-surface-2 p-6 flex flex-col gap-3 hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+          <span class="inline-flex w-fit items-center rounded-md bg-ink border border-line px-2.5 py-1 text-xs font-display font-bold uppercase tracking-wide text-smoke">Cash</span>
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl">Remote Monday Cash League</h3>
+          <p class="text-sm text-smoke">Monday · Darts</p>
+          <span class="mt-auto text-sm font-display font-bold uppercase tracking-wide text-red">View league →</span>
+        </a>
+
+        <a href="#" data-phase2 class="group rounded-lg border border-line bg-surface-2 p-6 flex flex-col gap-3 hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+          <span class="inline-flex w-fit items-center rounded-md bg-ink border border-line px-2.5 py-1 text-xs font-display font-bold uppercase tracking-wide text-smoke">In-House</span>
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl">Tuesday Dart League</h3>
+          <p class="text-sm text-smoke">Tuesday · Darts</p>
+          <span class="mt-auto text-sm font-display font-bold uppercase tracking-wide text-red">View league →</span>
+        </a>
+
+        <a href="wednesday-a-pool.html" class="group rounded-lg border border-red bg-surface-2 p-6 flex flex-col gap-3 hover:bg-surface transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+          <span class="inline-flex w-fit items-center rounded-md bg-red px-2.5 py-1 text-xs font-display font-bold uppercase tracking-wide text-ink">A Division</span>
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl">Wednesday A Division Pool</h3>
+          <p class="text-sm text-smoke">Wednesday · 8-Ball</p>
+          <span class="mt-auto text-sm font-display font-bold uppercase tracking-wide text-red">View standings →</span>
+        </a>
+
+        <a href="#" data-phase2 class="group rounded-lg border border-line bg-surface-2 p-6 flex flex-col gap-3 hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+          <span class="inline-flex w-fit items-center rounded-md bg-ink border border-line px-2.5 py-1 text-xs font-display font-bold uppercase tracking-wide text-smoke">B Division</span>
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl">Wednesday B Division Pool</h3>
+          <p class="text-sm text-smoke">Wednesday · 8-Ball</p>
+          <span class="mt-auto text-sm font-display font-bold uppercase tracking-wide text-red">View league →</span>
+        </a>
+
+        <a href="#" data-phase2 class="group rounded-lg border border-line bg-surface-2 p-6 flex flex-col gap-3 hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+          <span class="inline-flex w-fit items-center rounded-md bg-ink border border-line px-2.5 py-1 text-xs font-display font-bold uppercase tracking-wide text-smoke">Cash</span>
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl">Remote Thursday Cash League</h3>
+          <p class="text-sm text-smoke">Thursday · Darts</p>
+          <span class="mt-auto text-sm font-display font-bold uppercase tracking-wide text-red">View league →</span>
+        </a>
+
+      </div>
+
+      <div class="mt-8 md:mt-10 rounded-lg bg-red text-ink px-5 md:px-6 py-4 font-display font-bold uppercase tracking-wide text-center text-sm md:text-base">
+        Thursday Remote Cash League — next season starts Thursday, July 30th.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VEGAS / TEAM DART BANNER ============ -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img src="images/vegas-strip.jpg" alt="Las Vegas strip at night" loading="lazy" class="absolute inset-0 w-full h-full object-cover" width="1600" height="686">
+    <div class="absolute inset-0 bg-ink/80"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 text-center">
+      <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-4">Play Your Way To Las Vegas</h2>
+      <p class="text-base md:text-lg leading-relaxed text-chalk/90 max-w-2xl mx-auto mb-8">Our cash league players compete for spots at the NDA Team Dart national championship — April 8–14, 2027, Westgate Las Vegas Resort &amp; Casino.</p>
+      <a href="#" data-phase2 class="inline-flex items-center justify-center border border-chalk/60 text-chalk font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:border-red hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+        Team Dart details →
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE AREA ============ -->
+  <section id="service-area" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden border border-line">
+          <img src="images/service-area-map.svg" alt="Map of South Mississippi and Southeast Louisiana service territory" loading="lazy" class="w-full h-auto" width="800" height="600">
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-6">Where We Serve</h2>
+
+          <!-- UNVERIFIED: county/parish list is a placeholder pending confirmation from Michael Veglia. Confirm exact service territory before this ships. -->
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="font-display font-bold uppercase tracking-wide text-sm text-blue mb-1">Mississippi</p>
+              <p class="text-base md:text-lg text-chalk">Hancock, Harrison, Jackson, Pearl River counties</p>
+            </div>
+            <div>
+              <p class="font-display font-bold uppercase tracking-wide text-sm text-blue mb-1">Louisiana</p>
+              <p class="text-base md:text-lg text-chalk">St. Tammany, Washington, Orleans parishes</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-smoke">Not sure if you're in range? Call — if we can get a truck to you, we'll come look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-16 md:py-24 bg-surface border-y border-line">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <h2 class="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-10 md:mb-14">Get In Touch</h2>
+
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14">
+
+        <div id="contact-form-wrap" class="rounded-lg border border-line bg-surface-2 p-6 md:p-8">
+          <form id="contact-form" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="first-name" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">First Name</label>
+                <input type="text" id="first-name" name="first-name" required class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+              </div>
+            </div>
+
+            <div>
+              <label for="venue" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">Business / Venue</label>
+              <input type="text" id="venue" name="venue" class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">Phone</label>
+                <input type="tel" id="phone" name="phone" class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+              </div>
+            </div>
+
+            <div>
+              <label for="need" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">What do you need?</label>
+              <select id="need" name="need" class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+                <option>Place equipment in my venue</option>
+                <option>Buy or lease equipment</option>
+                <option>Repair request</option>
+                <option>Party rental</option>
+                <option>League question</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-display font-bold uppercase tracking-wide text-smoke mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red"></textarea>
+            </div>
+
+            <!-- Phase 2: wire this form to a real submit endpoint. Demo intercepts submit and shows a styled success state only. -->
+            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-surface-2">
+              Send message →
+            </button>
+          </form>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-6">Talk To Michael</h3>
+          <a href="tel:+12284930845" class="font-display font-bold uppercase tracking-wide text-3xl md:text-4xl text-red hover:text-red/80 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md w-fit mb-4">228-493-0845</a>
+          <a href="mailto:hancockamusement@gmail.com" class="text-base md:text-lg text-chalk hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md w-fit mb-4">hancockamusement@gmail.com</a>
+          <p class="text-base text-smoke mb-4">South Mississippi &amp; Southeast Louisiana</p>
+          <p class="text-sm text-smoke">Fastest response: call or text.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-surface border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-16">
+    <div class="grid sm:grid-cols-3 gap-10">
+      <div>
+        <img src="images/logo.png" alt="Hancock Amusement" width="59" height="45" class="h-16 w-auto mb-4">
+        <p class="text-sm text-smoke leading-relaxed">Commission amusement equipment and ATM placement for bars and venues across South Mississippi and Southeast Louisiana.</p>
+      </div>
+      <div>
+        <h3 class="font-display font-bold uppercase tracking-wide text-sm text-smoke mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a></li>
+          <li><a href="#leagues" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a></li>
+          <li><a href="#service-area" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a></li>
+          <li><a href="#contact" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display font-bold uppercase tracking-wide text-sm text-smoke mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:+12284930845" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">228-493-0845</a></li>
+          <li><a href="mailto:hancockamusement@gmail.com" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">hancockamusement@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-smoke text-center sm:text-left">
+      <p>© 2026 Hancock Amusement · A Family Owned &amp; Managed Business</p>
+      <p>Site by Ladner Web Systems</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    mobileNav.classList.toggle('hidden');
+  });
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.add('hidden');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Phase 2 placeholder links: keep users on the page, no dead navigation
+  document.querySelectorAll('[data-phase2]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+    });
+  });
+
+  // Contact form: intercept submit, show styled success state (non-functional in demo)
+  var contactForm = document.getElementById('contact-form');
+  var contactWrap = document.getElementById('contact-form-wrap');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    contactWrap.innerHTML =
+      '<div class="flex flex-col items-center justify-center text-center py-10">' +
+        '<div class="w-14 h-14 rounded-full bg-blue/20 border border-blue flex items-center justify-center mb-5">' +
+          '<svg class="w-7 h-7 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>' +
+        '</div>' +
+        '<h3 class="font-display font-bold uppercase tracking-wide text-xl md:text-2xl mb-2">Message received</h3>' +
+        '<p class="text-base text-smoke max-w-sm">Thanks — Michael will get back to you directly. For a faster response, call or text 228-493-0845.</p>' +
+      '</div>';
+  });
+</script>
+
+</body>
+</html>

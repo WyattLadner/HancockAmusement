@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wednesday Night Pool — A Division Standings | Hancock Amusement</title>
+<meta name="description" content="Live, mobile-readable standings for the Wednesday Night Pool A Division league. Sortable by win percentage, games played and games won.">
+<meta property="og:title" content="Wednesday Night Pool — A Division Standings">
+<meta property="og:description" content="Real, sortable, mobile-readable league standings — no more squinting at a spreadsheet screenshot.">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#050C15',
+          surface: '#0A1422',
+          'surface-2': '#0F1D2E',
+          line: '#1C2E45',
+          red: '#F60B1A',
+          blue: '#3188F2',
+          chalk: '#F3F5F7',
+          smoke: '#919DAC'
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['"Barlow Condensed"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="bg-ink text-chalk font-sans antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-red focus:text-ink focus:px-4 focus:py-2 focus:rounded-md">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+      <img src="images/logo-header.png" alt="Hancock Amusement" width="105" height="55" class="h-10 md:h-12 w-auto">
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 font-display uppercase tracking-wide text-sm text-chalk" aria-label="Primary">
+      <a href="index.html#services" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a>
+      <a href="index.html#leagues" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a>
+      <a href="index.html#service-area" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a>
+      <a href="#" data-phase2 class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">About</a>
+      <a href="index.html#contact" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2 md:gap-3">
+      <a href="tel:+12284930845"
+         class="inline-flex items-center gap-2 bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-3 md:px-5 py-2.5 hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+         aria-label="Call Hancock Amusement at 228-493-0845">
+        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/></svg>
+        <span class="hidden sm:inline">228-493-0845</span>
+      </a>
+
+      <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"
+              class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-line text-chalk hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+        <span class="sr-only">Toggle menu</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="md:hidden hidden border-t border-line bg-ink" aria-label="Primary mobile">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-1 font-display uppercase tracking-wide text-base">
+      <a href="index.html#services" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a>
+      <a href="index.html#leagues" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a>
+      <a href="index.html#service-area" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a>
+      <a href="#" data-phase2 class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">About</a>
+      <a href="index.html#contact" class="py-2.5 hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-8 md:pt-12">
+
+    <!-- ============ BREADCRUMB / PAGE HEADER ============ -->
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-smoke">
+        <li><a href="index.html" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="index.html#leagues" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" class="text-chalk">Wednesday A Division</li>
+      </ol>
+    </nav>
+
+    <h1 class="font-display font-bold uppercase tracking-wide text-4xl md:text-6xl mb-2">Wednesday Night Pool — A Division</h1>
+    <p class="text-sm text-smoke mb-8">Last updated 7/26/2026</p>
+
+    <!-- ============ DEADLINE ALERT ============ -->
+    <div class="rounded-lg border-2 border-red bg-surface px-5 md:px-6 py-4 mb-10 flex items-start gap-3">
+      <svg class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-red mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+      <p class="text-sm md:text-base leading-relaxed">
+        <span class="font-display font-bold uppercase tracking-wide">All stats must be turned in by Thursday 11:00 AM at Knock Knock.</span>
+        Questions? <a href="tel:+12284930845" class="text-red hover:text-red/80 underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Call 228-493-0845</a>.
+      </p>
+    </div>
+
+    <!-- ============ SECTION TABS ============ -->
+    <div role="tablist" aria-label="League information" class="flex flex-wrap gap-2 border-b border-line mb-8">
+      <button role="tab" id="tab-standings" aria-controls="panel-standings" aria-selected="true" tabindex="0"
+              class="tab-btn font-display font-bold uppercase tracking-wide text-sm md:text-base px-4 py-3 border-b-2 border-red text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-t-md">
+        Standings
+      </button>
+      <button role="tab" id="tab-schedule" aria-controls="panel-schedule" aria-selected="false" tabindex="-1"
+              class="tab-btn font-display font-bold uppercase tracking-wide text-sm md:text-base px-4 py-3 border-b-2 border-transparent text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-t-md">
+        Schedule
+      </button>
+      <button role="tab" id="tab-rules" aria-controls="panel-rules" aria-selected="false" tabindex="-1"
+              class="tab-btn font-display font-bold uppercase tracking-wide text-sm md:text-base px-4 py-3 border-b-2 border-transparent text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-t-md">
+        Rules
+      </button>
+      <button role="tab" id="tab-contacts" aria-controls="panel-contacts" aria-selected="false" tabindex="-1"
+              class="tab-btn font-display font-bold uppercase tracking-wide text-sm md:text-base px-4 py-3 border-b-2 border-transparent text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-t-md">
+        Team Contacts
+      </button>
+    </div>
+
+    <!-- ============ STANDINGS PANEL ============ -->
+    <div role="tabpanel" id="panel-standings" aria-labelledby="tab-standings" class="pb-16 md:pb-24">
+
+      <!-- Desktop / tablet table -->
+      <div class="hidden sm:block rounded-lg border border-line">
+        <table class="w-full text-sm md:text-base tabular-nums" id="standings-table">
+          <thead>
+            <tr class="bg-surface-2 sticky top-16 md:top-20 z-10 rounded-t-lg">
+              <th scope="col" class="px-4 py-3 text-left font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke">#</th>
+              <th scope="col" aria-sort="descending" class="px-4 py-3 text-left">
+                <button type="button" data-key="winPct" data-numeric="true" class="sort-btn inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-xs md:text-sm text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+                  Win % <span class="sort-arrow" aria-hidden="true">▼</span>
+                </button>
+              </th>
+              <th scope="col" aria-sort="none" class="px-4 py-3 text-left">
+                <button type="button" data-key="team" data-numeric="false" class="sort-btn inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+                  Team <span class="sort-arrow" aria-hidden="true"></span>
+                </button>
+              </th>
+              <th scope="col" aria-sort="none" class="px-4 py-3 text-left">
+                <button type="button" data-key="played" data-numeric="true" class="sort-btn inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+                  Played <span class="sort-arrow" aria-hidden="true"></span>
+                </button>
+              </th>
+              <th scope="col" aria-sort="none" class="px-4 py-3 text-left">
+                <button type="button" data-key="won" data-numeric="true" class="sort-btn inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+                  Won <span class="sort-arrow" aria-hidden="true"></span>
+                </button>
+              </th>
+              <th scope="col" aria-sort="none" class="px-4 py-3 text-left">
+                <button type="button" data-key="notes" data-numeric="false" class="sort-btn inline-flex items-center gap-1 font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke hover:text-chalk transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">
+                  Notes <span class="sort-arrow" aria-hidden="true"></span>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="standings-tbody"><!-- rendered by JS --></tbody>
+        </table>
+      </div>
+
+      <!-- Mobile cards -->
+      <div class="sm:hidden flex flex-col gap-3" id="standings-cards"><!-- rendered by JS --></div>
+
+      <p class="text-xs md:text-sm text-smoke mt-4">* Played with 3 players &nbsp;·&nbsp; ** Forfeit</p>
+
+      <div class="mt-4 rounded-lg bg-surface border border-line px-5 py-4 text-sm md:text-base">
+        <span class="font-display font-bold uppercase tracking-wide text-blue">Makeup notice:</span>
+        8 In The Hole &amp; Back Sidee — makeup Week 7.
+      </div>
+    </div>
+
+    <!-- ============ SCHEDULE PANEL ============ -->
+    <div role="tabpanel" id="panel-schedule" aria-labelledby="tab-schedule" class="hidden pb-16 md:pb-24">
+      <div class="rounded-lg border border-line bg-surface p-10 text-center">
+        <p class="font-display font-bold uppercase tracking-wide text-xl text-smoke">Coming in the full build</p>
+      </div>
+    </div>
+
+    <!-- ============ RULES PANEL ============ -->
+    <div role="tabpanel" id="panel-rules" aria-labelledby="tab-rules" class="hidden pb-16 md:pb-24">
+      <div class="rounded-lg border border-line bg-surface p-10 text-center">
+        <p class="font-display font-bold uppercase tracking-wide text-xl text-smoke">Coming in the full build</p>
+      </div>
+    </div>
+
+    <!-- ============ TEAM CONTACTS PANEL ============ -->
+    <div role="tabpanel" id="panel-contacts" aria-labelledby="tab-contacts" class="hidden pb-16 md:pb-24">
+      <div class="rounded-lg border border-line bg-surface p-10 text-center">
+        <p class="font-display font-bold uppercase tracking-wide text-xl text-smoke">Coming in the full build</p>
+      </div>
+    </div>
+
+    <!-- ============ BACK LINK ============ -->
+    <a href="index.html#leagues" class="block rounded-lg border border-line bg-surface px-6 py-5 mb-16 md:mb-24 hover:border-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red">
+      <span class="font-display font-bold uppercase tracking-wide text-red">← All Leagues</span>
+    </a>
+
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-surface border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-16">
+    <div class="grid sm:grid-cols-3 gap-10">
+      <div>
+        <img src="images/logo.png" alt="Hancock Amusement" width="59" height="45" class="h-16 w-auto mb-4">
+        <p class="text-sm text-smoke leading-relaxed">Commission amusement equipment and ATM placement for bars and venues across South Mississippi and Southeast Louisiana.</p>
+      </div>
+      <div>
+        <h3 class="font-display font-bold uppercase tracking-wide text-sm text-smoke mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html#services" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Services</a></li>
+          <li><a href="index.html#leagues" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Leagues</a></li>
+          <li><a href="index.html#service-area" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Service Area</a></li>
+          <li><a href="index.html#contact" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display font-bold uppercase tracking-wide text-sm text-smoke mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:+12284930845" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">228-493-0845</a></li>
+          <li><a href="mailto:hancockamusement@gmail.com" class="hover:text-red transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md">hancockamusement@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-smoke text-center sm:text-left">
+      <p>© 2026 Hancock Amusement · A Family Owned &amp; Managed Business</p>
+      <p>Site by Ladner Web Systems</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---------- Mobile nav toggle ----------
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    mobileNav.classList.toggle('hidden');
+  });
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.add('hidden');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.querySelectorAll('[data-phase2]').forEach(function (link) {
+    link.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+
+  // ---------- Tabs ----------
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var panels = {
+    'tab-standings': document.getElementById('panel-standings'),
+    'tab-schedule': document.getElementById('panel-schedule'),
+    'tab-rules': document.getElementById('panel-rules'),
+    'tab-contacts': document.getElementById('panel-contacts')
+  };
+
+  function activateTab(tab) {
+    tabs.forEach(function (t) {
+      var selected = t === tab;
+      t.setAttribute('aria-selected', String(selected));
+      t.tabIndex = selected ? 0 : -1;
+      t.classList.toggle('border-red', selected);
+      t.classList.toggle('text-red', selected);
+      t.classList.toggle('border-transparent', !selected);
+      t.classList.toggle('text-smoke', !selected);
+      panels[t.id].classList.toggle('hidden', !selected);
+    });
+    tab.focus();
+  }
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { activateTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === 'Home') next = tabs[0];
+      if (e.key === 'End') next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); activateTab(next); }
+    });
+  });
+
+  // ---------- Standings data & sort ----------
+  var standings = [
+    { team: '5 Sticks & A Rack', winPct: 66, played: 35, won: 23,   notes: '*'  },
+    { team: 'Outsiders',         winPct: 66, played: 35, won: 23,   notes: '*'  },
+    { team: 'Miller Time',       winPct: 64, played: 35, won: 22.5, notes: '*'  },
+    { team: '8 Ball Express',    winPct: 63, played: 35, won: 22,   notes: ''   },
+    { team: 'Below Average',     winPct: 61, played: 35, won: 21.5, notes: ''   },
+    { team: 'Back Sidee',        winPct: 50, played: 30, won: 15,   notes: ''   },
+    { team: 'Shootin Blanks',    winPct: 49, played: 35, won: 17,   notes: ''   },
+    { team: 'Gone Country',      winPct: 33, played: 35, won: 11.5, notes: '*'  },
+    { team: '8 In The Hole',     winPct: 30, played: 30, won: 9,    notes: ''   },
+    { team: 'Shot In The Dark',  winPct: 16, played: 35, won: 5.5,  notes: '**' }
+  ];
+
+  var sortState = { key: 'winPct', dir: 'desc' };
+
+  function sortedStandings() {
+    var arr = standings.map(function (row, i) { return { row: row, i: i }; });
+    arr.sort(function (a, b) {
+      var av = a.row[sortState.key];
+      var bv = b.row[sortState.key];
+      var cmp;
+      if (typeof av === 'string') {
+        cmp = av.localeCompare(bv);
+      } else {
+        cmp = av - bv;
+      }
+      if (sortState.dir === 'desc') cmp = -cmp;
+      if (cmp === 0) cmp = a.i - b.i;
+      return cmp;
+    });
+    return arr.map(function (a) { return a.row; });
+  }
+
+  function render() {
+    var data = sortedStandings();
+    var tbody = document.getElementById('standings-tbody');
+    var cards = document.getElementById('standings-cards');
+    tbody.innerHTML = '';
+    cards.innerHTML = '';
+
+    data.forEach(function (row, idx) {
+      var rank = idx + 1;
+      var topThree = rank <= 3;
+
+      var tr = document.createElement('tr');
+      tr.className = 'odd:bg-surface/40 border-t border-line' + (topThree ? ' border-l-4 border-l-blue' : '');
+      tr.innerHTML =
+        '<td class="px-4 py-3 text-smoke">' + rank + '</td>' +
+        '<td class="px-4 py-3 font-display font-bold text-red">' + row.winPct + '%</td>' +
+        '<td class="px-4 py-3">' + row.team + '</td>' +
+        '<td class="px-4 py-3">' + row.played + '</td>' +
+        '<td class="px-4 py-3">' + row.won + '</td>' +
+        '<td class="px-4 py-3 text-smoke">' + row.notes + '</td>';
+      tbody.appendChild(tr);
+
+      var card = document.createElement('div');
+      card.className = 'rounded-lg border border-line bg-surface-2 p-4' + (topThree ? ' border-l-4 border-l-blue' : '');
+      card.innerHTML =
+        '<div class="flex items-center justify-between gap-3 mb-3">' +
+          '<p class="font-display font-bold uppercase tracking-wide text-base"><span class="text-smoke mr-2">#' + rank + '</span>' + row.team + '</p>' +
+          '<p class="font-display font-bold text-2xl text-red tabular-nums flex-shrink-0">' + row.winPct + '%</p>' +
+        '</div>' +
+        '<div class="flex gap-6 text-sm">' +
+          '<p><span class="text-smoke">Played</span> <span class="tabular-nums">' + row.played + '</span></p>' +
+          '<p><span class="text-smoke">Won</span> <span class="tabular-nums">' + row.won + '</span></p>' +
+          (row.notes ? '<p class="text-smoke">' + row.notes + '</p>' : '') +
+        '</div>';
+      cards.appendChild(card);
+    });
+  }
+
+  var sortButtons = Array.prototype.slice.call(document.querySelectorAll('.sort-btn'));
+  sortButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.key;
+      if (sortState.key === key) {
+        sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortState.key = key;
+        sortState.dir = btn.dataset.numeric === 'true' ? 'desc' : 'asc';
+      }
+
+      sortButtons.forEach(function (b) {
+        var th = b.closest('th');
+        var arrow = b.querySelector('.sort-arrow');
+        if (b === btn) {
+          th.setAttribute('aria-sort', sortState.dir === 'asc' ? 'ascending' : 'descending');
+          arrow.textContent = sortState.dir === 'asc' ? '▲' : '▼';
+          b.classList.add('text-red');
+          b.classList.remove('text-smoke');
+        } else {
+          th.setAttribute('aria-sort', 'none');
+          arrow.textContent = '';
+          b.classList.remove('text-red');
+          b.classList.add('text-smoke');
+        }
+      });
+
+      render();
+    });
+  });
+
+  render();
+</script>
+
+</body>
+</html>

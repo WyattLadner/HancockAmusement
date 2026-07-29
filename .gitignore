@@ -1,0 +1,21 @@
+# Windows / OneDrive junk
+desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Internal working docs — uncomment if this repo is public
+# IMPLEMENTATION_PHASE1.md
+
+# Dependencies (not used now, here for later)
+node_modules/
+.env
+.env.local
+.vercel
