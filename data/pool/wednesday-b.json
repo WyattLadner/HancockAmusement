@@ -1,0 +1,13 @@
+{
+  "league": "Wednesday B Division Pool",
+  "updated": null,
+  "source": "pending",
+  "_comment": "No B-division data captured yet. The live Wix page posts it as an uploaded image/PDF. Populate via the pool-ingest workflow once Caleb's source file is available — same schema as wednesday-a.json.",
+  "statsDeadline": "All stats must be turned in by Thursday 11:00 AM at Knock Knock.",
+  "footnotes": [
+    { "mark": "*", "meaning": "Played with 3 players" },
+    { "mark": "**", "meaning": "Forfeit" }
+  ],
+  "makeupNotice": null,
+  "standings": []
+}

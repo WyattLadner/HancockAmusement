@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base page colors match the approved demo (bg-ink / text-chalk). Set here so the
+   viewport background is correct even before the body class paints. */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #050c15; /* ink */
+  color: #f3f5f7; /* chalk */
+}

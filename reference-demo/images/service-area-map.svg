@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Service area map placeholder: South Mississippi and Southeast Louisiana, Gulf Coast">
+  <rect width="800" height="600" fill="#0F1D2E"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#1C2E45" stroke-width="2"/>
+
+  <!-- simplified gulf coast landmass -->
+  <path d="M 60 60 L 520 60 L 520 340 L 460 340 L 440 400 L 380 420 L 340 460 L 280 470 L 240 500 L 180 480 L 140 440 L 90 420 L 60 380 Z" fill="#0A1422" stroke="#3188F2" stroke-width="2"/>
+
+  <!-- gulf of mexico -->
+  <path d="M 60 380 L 90 420 L 140 440 L 180 480 L 240 500 L 700 500 L 700 560 L 60 560 Z" fill="#050C15"/>
+  <text x="380" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="2" fill="#919DAC">GULF OF MEXICO</text>
+
+  <!-- MS counties (placeholder blobs) -->
+  <circle cx="230" cy="200" r="14" fill="#F60B1A"/>
+  <text x="230" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Hancock</text>
+
+  <circle cx="300" cy="190" r="14" fill="#F60B1A"/>
+  <text x="300" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Harrison</text>
+
+  <circle cx="370" cy="200" r="14" fill="#F60B1A"/>
+  <text x="370" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Jackson</text>
+
+  <circle cx="280" cy="130" r="14" fill="#F60B1A"/>
+  <text x="280" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Pearl River</text>
+
+  <!-- LA parishes -->
+  <circle cx="150" cy="230" r="12" fill="#3188F2"/>
+  <text x="150" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">St. Tammany</text>
+
+  <circle cx="100" cy="180" r="12" fill="#3188F2"/>
+  <text x="100" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Washington</text>
+
+  <circle cx="130" cy="300" r="12" fill="#3188F2"/>
+  <text x="130" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#F3F5F7">Orleans</text>
+
+  <text x="400" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#919DAC">service-area-map.svg — placeholder, replace with real map graphic</text>
+</svg>
