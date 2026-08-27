@@ -1,0 +1,426 @@
+{
+  "slug": "remote-monday-cash",
+  "source": "monday-schedule.txt",
+  "weeks": [
+    {
+      "week": 1,
+      "date": "1/20/2025",
+      "matches": [
+        {
+          "home": "Couples Retreat",
+          "away": "Trip Stumble N Fall",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "DILLIGAF",
+          "away": "Ton80",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "date": "1/27/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Trip Stumble N Fall",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "The Striving Dartist",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "date": "2/03/2025",
+      "matches": [
+        {
+          "home": "Couples Retreat",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "The Striving Dartist",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Ton80",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "date": "2/10/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Money Shot",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Ton80",
+          "away": "Trip Stumble N Fall",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Couples Retreat",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "date": "2/17/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "The Striving Dartist",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "date": "2/24/2025",
+      "matches": [
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Couples Retreat",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "The Striving Dartist",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Ton80",
+          "away": "DILLIGAF",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "date": "3/03/2025",
+      "matches": [
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Couples Retreat",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "date": "3/10/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Couples Retreat",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Trip Stumble N Fall",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "Money Shot",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "date": "3/17/2025",
+      "matches": [
+        {
+          "home": "Money Shot",
+          "away": "DILLIGAF",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "The Striving Dartist",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "date": "3/24/2025",
+      "matches": [
+        {
+          "home": "The Striving Dartist",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "Couples Retreat",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Trip Stumble N Fall",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "date": "3/31/2025",
+      "matches": [
+        {
+          "home": "Couples Retreat",
+          "away": "Trip Stumble N Fall",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "DILLIGAF",
+          "away": "Ton80",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "date": "4/07/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Trip Stumble N Fall",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "The Striving Dartist",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "date": "4/14/2025",
+      "matches": [
+        {
+          "home": "Couples Retreat",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "The Striving Dartist",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Ton80",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "date": "4/21/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Money Shot",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Ton80",
+          "away": "Trip Stumble N Fall",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Couples Retreat",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "date": "4/28/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "The Striving Dartist",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Money Shot",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "date": "5/05/2025",
+      "matches": [
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Couples Retreat",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "The Striving Dartist",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Ton80",
+          "away": "DILLIGAF",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "date": "5/12/2025",
+      "matches": [
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Couples Retreat",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "date": "5/19/2025",
+      "matches": [
+        {
+          "home": "DILLIGAF",
+          "away": "Couples Retreat",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "The Striving Dartist",
+          "away": "Trip Stumble N Fall",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "Money Shot",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "date": "6/02/2025",
+      "matches": [
+        {
+          "home": "Money Shot",
+          "away": "DILLIGAF",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Trip Stumble N Fall",
+          "away": "Ton80",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Couples Retreat",
+          "away": "The Striving Dartist",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "date": "6/09/2025",
+      "matches": [
+        {
+          "home": "The Striving Dartist",
+          "away": "DILLIGAF",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Ton80",
+          "away": "Couples Retreat",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Money Shot",
+          "away": "Trip Stumble N Fall",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    }
+  ]
+}

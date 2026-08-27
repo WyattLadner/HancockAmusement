@@ -1,0 +1,564 @@
+{
+  "slug": "remote-thursday-cash",
+  "source": "thursday-schedule.txt",
+  "weeks": [
+    {
+      "week": 1,
+      "date": "7/30/2026",
+      "matches": [
+        {
+          "home": "Dart Familia",
+          "away": "JnT Drunks",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "Throwed Off",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Bulls Eye Bandits",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "Throwing Impaired",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Moonshine Bandits",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "date": "8/06/2026",
+      "matches": [
+        {
+          "home": "Turtle Attack",
+          "away": "Suck My Balls",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "Beastie Boyz",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "Throwed Off",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "26club Rejex",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Dart Familia",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "date": "8/13/2026",
+      "matches": [
+        {
+          "home": "Beastie Boyz",
+          "away": "Dart Familia",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Suck My Balls",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "Turtle Attack",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "Throwing Impaired",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Bulls Eye Bandits",
+          "venue": "Turtle Landing"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "date": "8/20/2026",
+      "matches": [
+        {
+          "home": "Dart Familia",
+          "away": "26club Rejex",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Beastie Boyz",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Throwed Off",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "JnT Drunks",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "Moonshine Bandits",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "date": "8/27/2026",
+      "matches": [
+        {
+          "home": "Moonshine Bandits",
+          "away": "Beastie Boyz",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "26club Rejex",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Dart Familia",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Suck My Balls",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Turtle Attack",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "date": "9/03/2026",
+      "matches": [
+        {
+          "home": "JnT Drunks",
+          "away": "Throwed Off",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "Bulls Eye Bandits",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Throwing Impaired",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Dart Familia",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "Suck My Balls",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "date": "9/10/2026",
+      "matches": [
+        {
+          "home": "Suck My Balls",
+          "away": "Dart Familia",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Turtle Attack",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Moonshine Bandits",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "JnT Drunks",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Beastie Boyz",
+          "venue": "Turtle Landing"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "date": "9/17/2026",
+      "matches": [
+        {
+          "home": "Moonshine Bandits",
+          "away": "Dart Familia",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Throwing Impaired",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Turtle Attack",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "Suck My Balls",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "26club Rejex",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "date": "9/24/2026",
+      "matches": [
+        {
+          "home": "JnT Drunks",
+          "away": "Moonshine Bandits",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Throwed Off",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Dart Familia",
+          "away": "Bulls Eye Bandits",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Suck My Balls",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Beastie Boyz",
+          "venue": "Turtle Landing"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "date": "10/01/2026",
+      "matches": [
+        {
+          "home": "JnT Drunks",
+          "away": "Dart Familia",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Suck My Balls",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Turtle Attack",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Beastie Boyz",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "26club Rejex",
+          "venue": "Moonshine N Whiskey"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "date": "10/08/2026",
+      "matches": [
+        {
+          "home": "Suck My Balls",
+          "away": "Turtle Attack",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "JnT Drunks",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Moonshine Bandits",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Bulls Eye Bandits",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Dart Familia",
+          "away": "Throwing Impaired",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "date": "10/15/2026",
+      "matches": [
+        {
+          "home": "Dart Familia",
+          "away": "Beastie Boyz",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "26club Rejex",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Moonshine Bandits",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "JnT Drunks",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Throwed Off",
+          "venue": "Harold And Lillians"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "date": "10/22/2026",
+      "matches": [
+        {
+          "home": "26club Rejex",
+          "away": "Dart Familia",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "Bulls Eye Bandits",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "Throwing Impaired",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "Turtle Attack",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "Suck My Balls",
+          "venue": "Moonshine N Whiskey"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "date": "10/29/2026",
+      "matches": [
+        {
+          "home": "Beastie Boyz",
+          "away": "Moonshine Bandits",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "JnT Drunks",
+          "venue": "Ton80 Bar N Grill"
+        },
+        {
+          "home": "Dart Familia",
+          "away": "Throwed Off",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "Bulls Eye Bandits",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Throwing Impaired",
+          "venue": "Turtle Landing"
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "date": "11/05/2026",
+      "matches": [
+        {
+          "home": "Throwed Off",
+          "away": "JnT Drunks",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Moonshine Bandits",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "26club Rejex",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Dart Familia",
+          "away": "Turtle Attack",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "Beastie Boyz",
+          "venue": "Stagecoach Saloon"
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "date": "11/12/2026",
+      "matches": [
+        {
+          "home": "Dart Familia",
+          "away": "Suck My Balls",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "26club Rejex",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Moonshine Bandits",
+          "away": "Throwing Impaired",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "JnT Drunks",
+          "away": "Bulls Eye Bandits",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "Throwed Off",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "date": "11/19/2026",
+      "matches": [
+        {
+          "home": "Dart Familia",
+          "away": "Moonshine Bandits",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Throwing Impaired",
+          "away": "Bulls Eye Bandits",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Turtle Attack",
+          "away": "Throwed Off",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "JnT Drunks",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "26club Rejex",
+          "away": "Beastie Boyz",
+          "venue": "Ton80 Bar N Grill"
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "date": "12/03/2026",
+      "matches": [
+        {
+          "home": "Moonshine Bandits",
+          "away": "JnT Drunks",
+          "venue": "Moonshine N Whiskey"
+        },
+        {
+          "home": "Throwed Off",
+          "away": "26club Rejex",
+          "venue": "Turtle Landing"
+        },
+        {
+          "home": "Bulls Eye Bandits",
+          "away": "Dart Familia",
+          "venue": "Harold And Lillians"
+        },
+        {
+          "home": "Suck My Balls",
+          "away": "Throwing Impaired",
+          "venue": "Stagecoach Saloon"
+        },
+        {
+          "home": "Beastie Boyz",
+          "away": "Turtle Attack",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    }
+  ]
+}

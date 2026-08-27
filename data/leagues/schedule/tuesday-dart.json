@@ -1,0 +1,1072 @@
+{
+  "slug": "tuesday-dart",
+  "source": "darts-schedule.txt",
+  "weeks": [
+    {
+      "week": 1,
+      "date": "4/28/2026",
+      "matches": [
+        {
+          "home": "Sadies Boys",
+          "away": "The Renagades",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Rail Darts",
+          "venue": "BYE"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Steady Trippin",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Just The Tip",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "The 6285",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Bangin Neighbors",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "date": "5/05/2026",
+      "matches": [
+        {
+          "home": "Sadies Boys",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Shit Happens",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Knock Abouts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The 6285",
+          "away": "Rail Darts",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Cant Get Right",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "The Renagades",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "date": "5/12/2026",
+      "matches": [
+        {
+          "home": "Rail Darts",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "The Renagades",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Bangin Neighbors",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "The 6285",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Knock Abouts",
+          "venue": "BYE"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Cant Get Right",
+          "venue": "Knock Knock Tavern"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "date": "5/19/2026",
+      "matches": [
+        {
+          "home": "Sadies Boys",
+          "away": "Robin Hoods",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Shit Happens",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Bangin Neighbors",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The 6285",
+          "away": "The Renagades",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Just The Tip",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Steady Trippin",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "BYE",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "date": "5/26/2026",
+      "matches": [
+        {
+          "home": "Steady Trippin",
+          "away": "Just The Tip",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Knock Abouts",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Bangin Neighbors",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Sadies Boys",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "BYE",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "date": "6/02/2026",
+      "matches": [
+        {
+          "home": "The Renagades",
+          "away": "Rail Darts",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Cant Get Right",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "The 6285",
+          "venue": "BYE"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Sadies Boys",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Shit Happens",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Robin Hoods",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "date": "6/09/2026",
+      "matches": [
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Cant Get Right",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Steady Trippin",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "The Renagades",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Bangin Neighbors",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Shit Happens",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Knock Abouts",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "BYE",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "date": "6/16/2026",
+      "matches": [
+        {
+          "home": "Cant Get Right",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "The 6285",
+          "away": "Knock Abouts",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Just The Tip",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Rail Darts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "The Renagades",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "date": "6/23/2026",
+      "matches": [
+        {
+          "home": "Rail Darts",
+          "away": "Robin Hoods",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "The 6285",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "The Renagades",
+          "venue": "BYE"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Bangin Neighbors",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Cant Get Right",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "date": "6/30/2026",
+      "matches": [
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Shit Happens",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Bangin Neighbors",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "The Renagades",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Knock Abouts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "The 6285",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Steady Trippin",
+          "venue": "Sadies TipsyTavern"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "date": "7/07/2026",
+      "matches": [
+        {
+          "home": "Just The Tip",
+          "away": "Shit Happens",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Sadies Boys",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Robin Hoods",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Bangin Neighbors",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Cant Get Right",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "date": "7/14/2026",
+      "matches": [
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Cant Get Right",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "The Renagades",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Rail Darts",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Steady Trippin",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Knock Abouts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Kiln VFW Post 6285"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "date": "7/21/2026",
+      "matches": [
+        {
+          "home": "Cant Get Right",
+          "away": "Just The Tip",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "The 6285",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Knock Abouts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "The Renagades",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Bangin Neighbors",
+          "venue": "BYE"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Shit Happens",
+          "venue": "Sadies TipsyTavern"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "date": "7/28/2026",
+      "matches": [
+        {
+          "home": "The Renagades",
+          "away": "Sadies Boys",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Robin Hoods",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Knock Abouts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Cant Get Right",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Shit Happens",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "date": "8/04/2026",
+      "matches": [
+        {
+          "home": "BYE",
+          "away": "Sadies Boys",
+          "venue": "BYE"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Robin Hoods",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Bangin Neighbors",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "The 6285",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Just The Tip",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Steady Trippin",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "The Renagades",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Sadies TipsyTavern"
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "date": "8/11/2026",
+      "matches": [
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Rail Darts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Steady Trippin",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Just The Tip",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The 6285",
+          "away": "Shit Happens",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Sadies Boys",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Robin Hoods",
+          "venue": "Delta Dawn"
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "date": "8/18/2026",
+      "matches": [
+        {
+          "home": "Robin Hoods",
+          "away": "Sadies Boys",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Knock Abouts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Renagades",
+          "away": "The 6285",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Rail Darts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Cant Get Right",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "date": "8/25/2026",
+      "matches": [
+        {
+          "home": "Just The Tip",
+          "away": "Steady Trippin",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "The 6285",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Rail Darts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "The Renagades",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Robin Hoods",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Cant Get Right",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Shit Happens",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "date": "9/01/2026",
+      "matches": [
+        {
+          "home": "Rail Darts",
+          "away": "The Renagades",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Knock Abouts",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "The 6285",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "Just The Tip",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Steady Trippin",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Bangin Neighbors",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Knock Knock Tavern"
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "date": "9/08/2026",
+      "matches": [
+        {
+          "home": "Cant Get Right",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Rail Darts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Just The Tip",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "The 6285",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Sadies Boys",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Robin Hoods",
+          "venue": "BYE"
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "date": "9/15/2026",
+      "matches": [
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Cant Get Right",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "The 6285",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Just The Tip",
+          "away": "Robin Hoods",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "BYE",
+          "away": "Steady Trippin",
+          "venue": "BYE"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Sadies Boys",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Shit Happens",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Bangin Neighbors",
+          "venue": "Sadies TipsyTavern"
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "date": "9/22/2026",
+      "matches": [
+        {
+          "home": "Robin Hoods",
+          "away": "Rail Darts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Just The Tip",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "Steady Trippin",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "Knock Abouts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The Renagades",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Sadies Boys",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Shit Happens",
+          "venue": "Delta Dawn"
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "date": "9/29/2026",
+      "matches": [
+        {
+          "home": "Shit Happens",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Rail Darts",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Cant Get Right",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Robin Hoods",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "BYE",
+          "away": "Just The Tip",
+          "venue": "BYE"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Sadies Boys",
+          "venue": "Knock Knock Tavern"
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "date": "10/06/2026",
+      "matches": [
+        {
+          "home": "Shit Happens",
+          "away": "Just The Tip",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Sadies Boys",
+          "away": "The 6285",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "BYE",
+          "away": "DirtD N ThunderCunts",
+          "venue": "BYE"
+        },
+        {
+          "home": "Robin Hoods",
+          "away": "Knock Abouts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "Steady Trippin",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "The Renagades",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Rail Darts",
+          "venue": "Delta Dawn"
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "date": "10/13/2026",
+      "matches": [
+        {
+          "home": "BYE",
+          "away": "Smell Lik Bulls Hit",
+          "venue": "BYE"
+        },
+        {
+          "home": "Cant Get Right",
+          "away": "Bangin Neighbors",
+          "venue": "Delta Dawn"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Shit Happens",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Rail Darts",
+          "away": "Sadies Boys",
+          "venue": "Railroad Sports Bar"
+        },
+        {
+          "home": "Steady Trippin",
+          "away": "Robin Hoods",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Just The Tip",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "DirtD N ThunderCunts",
+          "away": "The 6285",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "date": "10/20/2026",
+      "matches": [
+        {
+          "home": "Just The Tip",
+          "away": "Cant Get Right",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The 6285",
+          "away": "Steady Trippin",
+          "venue": "Kiln VFW Post 6285"
+        },
+        {
+          "home": "Smell Lik Bulls Hit",
+          "away": "DirtD N ThunderCunts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "Knock Abouts",
+          "away": "Rail Darts",
+          "venue": "Knock Knock Tavern"
+        },
+        {
+          "home": "The Renagades",
+          "away": "Robin Hoods",
+          "venue": "Sadies TipsyTavern"
+        },
+        {
+          "home": "Bangin Neighbors",
+          "away": "BYE",
+          "venue": "BYE"
+        },
+        {
+          "home": "Shit Happens",
+          "away": "Sadies Boys",
+          "venue": "Railroad Sports Bar"
+        }
+      ]
+    }
+  ]
+}

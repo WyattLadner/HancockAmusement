@@ -4,6 +4,11 @@ const nextConfig = {
   // request/revalidate time from leagueleader.net (see lib/leagueleader.js), so no
   // remote image hosts are needed here.
   reactStrictMode: true,
+  webpack: (config) => {
+    // Import league rules Markdown files as raw strings.
+    config.module.rules.push({ test: /\.md$/, type: "asset/source" });
+    return config;
+  },
 };
 
 export default nextConfig;
