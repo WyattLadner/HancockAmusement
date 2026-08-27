@@ -31,6 +31,7 @@ export default function Footer() {
               <li><Link href="/#services" className={linkClass}>Services</Link></li>
               <li><Link href="/leagues" className={linkClass}>Leagues</Link></li>
               <li><Link href="/#service-area" className={linkClass}>Service Area</Link></li>
+              <li><Link href="/about" className={linkClass}>About</Link></li>
               <li><Link href="/#contact" className={linkClass}>Contact</Link></li>
             </ul>
           </div>
