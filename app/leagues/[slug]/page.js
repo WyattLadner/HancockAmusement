@@ -9,6 +9,7 @@ import PoolStandings from "@/components/PoolStandings";
 import PoolPlayers from "@/components/PoolPlayers";
 import ScheduleTable from "@/components/ScheduleTable";
 import RulesContent from "@/components/RulesContent";
+import PdfDoc from "@/components/PdfDoc";
 import LeagueTabs from "@/components/LeagueTabs";
 import { site } from "@/lib/site";
 
@@ -151,13 +152,21 @@ export default async function LeaguePage({ params }) {
   }
 
   const schedule = getSchedule(slug);
+  const isPool = league.type !== "darts";
+
+  // Darts rules render natively; pool rules are a Caleb-managed PDF.
   const rules = getRules(slug);
+  const rulesContent = isPool ? (
+    <PdfDoc url="/docs/pool-rules.pdf" title="Pool League Rules" note="Maintained by Hancock Amusement — updated each season." />
+  ) : rules ? (
+    <RulesContent markdown={rules} />
+  ) : null;
 
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
     { id: "players", label: "Player Stats", content: playersContent },
     { id: "schedule", label: "Schedule", content: schedule ? <ScheduleTable schedule={schedule} /> : null },
-    { id: "rules", label: "Rules", content: rules ? <RulesContent markdown={rules} /> : null },
+    { id: "rules", label: "Rules", content: rulesContent },
   ];
 
   return (
@@ -168,6 +177,19 @@ export default async function LeaguePage({ params }) {
       </h1>
       <p className="text-sm text-smoke mb-8">{metaLine}</p>
       {deadline}
+      {isPool ? (
+        <a
+          href="/docs/pool-score-sheet.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center gap-2 mb-8 rounded-md border border-line bg-surface px-4 py-2.5 text-sm font-display font-bold uppercase tracking-wide text-blue hover:border-red hover:text-red transition-colors duration-200 ${ring}`}
+        >
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+          </svg>
+          Blank Score Sheet (PDF)
+        </a>
+      ) : null}
       <LeagueTabs tabs={tabs} />
       <Link href="/leagues" className={`block rounded-lg border border-line bg-surface px-6 py-5 mt-12 md:mt-16 hover:border-red transition-colors duration-200 ${ring}`}>
         <span className="font-display font-bold uppercase tracking-wide text-red">← All Leagues</span>
