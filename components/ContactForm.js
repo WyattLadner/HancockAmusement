@@ -19,6 +19,8 @@ const NEEDS = [
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
 
   if (sent) {
     return (
@@ -41,17 +43,40 @@ export default function ContactForm() {
     );
   }
 
+  async function onSubmit(e) {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      firstName: fd.get("first-name"),
+      lastName: fd.get("last-name"),
+      venue: fd.get("venue"),
+      email: fd.get("email"),
+      phone: fd.get("phone"),
+      need: fd.get("need"),
+      message: fd.get("message"),
+      website: fd.get("website"), // honeypot
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Something went wrong.");
+      setSent(true);
+    } catch (err) {
+      setError(err.message || `Couldn't send. Please text or call ${site.phoneDisplay}.`);
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return (
     <div className="rounded-lg border border-line bg-surface-2 p-6 md:p-8">
-      {/* Phase 2: wire this to a real submit endpoint. For now it shows a styled
-          success state client-side only — nothing is sent anywhere. */}
-      <form
-        className="space-y-5"
-        onSubmit={(e) => {
-          e.preventDefault();
-          setSent(true);
-        }}
-      >
+      <form className="space-y-5" onSubmit={onSubmit}>
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
             <label htmlFor="first-name" className={labelClass}>First Name</label>
@@ -93,11 +118,22 @@ export default function ContactForm() {
           <textarea id="message" name="message" rows={4} className={inputClass} />
         </div>
 
+        {/* Honeypot — hidden from real users; bots fill it and get dropped. */}
+        <div aria-hidden="true" className="hidden">
+          <label htmlFor="website">Website</label>
+          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
+
+        {error ? (
+          <p className="rounded-md bg-red/15 border border-red px-4 py-3 text-sm text-chalk">{error}</p>
+        ) : null}
+
         <button
           type="submit"
-          className="w-full sm:w-auto inline-flex items-center justify-center bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:bg-red/90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-surface-2"
+          disabled={busy}
+          className="w-full sm:w-auto inline-flex items-center justify-center bg-red text-ink font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:bg-red/90 transition-colors duration-200 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red focus-visible:ring-offset-2 focus-visible:ring-offset-surface-2"
         >
-          Send message →
+          {busy ? "Sending…" : "Send message →"}
         </button>
       </form>
     </div>
