@@ -1,24 +1,90 @@
 {
   "league": "Wednesday A Division Pool",
-  "updated": "2026-07-26",
-  "source": "seed",
-  "_comment": "Seed data transcribed from the approved demo (itself from Caleb's Excel screenshot). Provisional until the pool-ingest workflow writes real data — see scripts/ingest-pool.mjs. The live Wix page had a newer image (TEAM 8-24) we could not parse; replace on first ingest.",
+  "updated": "2026-08-28",
+  "source": "xlsx",
   "statsDeadline": "All stats must be turned in by Thursday 11:00 AM at Knock Knock.",
   "footnotes": [
-    { "mark": "*", "meaning": "Played with 3 players" },
-    { "mark": "**", "meaning": "Forfeit" }
+    {
+      "mark": "*",
+      "meaning": "Played with 3 players"
+    },
+    {
+      "mark": "**",
+      "meaning": "Forfeit"
+    }
   ],
-  "makeupNotice": "8 In The Hole & Back Sidee — makeup Week 7.",
+  "makeupNotice": null,
   "standings": [
-    { "team": "5 Sticks & A Rack", "winPct": 66, "played": 35, "won": 23, "notes": "*" },
-    { "team": "Outsiders", "winPct": 66, "played": 35, "won": 23, "notes": "*" },
-    { "team": "Miller Time", "winPct": 64, "played": 35, "won": 22.5, "notes": "*" },
-    { "team": "8 Ball Express", "winPct": 63, "played": 35, "won": 22, "notes": "" },
-    { "team": "Below Average", "winPct": 61, "played": 35, "won": 21.5, "notes": "" },
-    { "team": "Back Sidee", "winPct": 50, "played": 30, "won": 15, "notes": "" },
-    { "team": "Shootin Blanks", "winPct": 49, "played": 35, "won": 17, "notes": "" },
-    { "team": "Gone Country", "winPct": 33, "played": 35, "won": 11.5, "notes": "*" },
-    { "team": "8 In The Hole", "winPct": 30, "played": 30, "won": 9, "notes": "" },
-    { "team": "Shot In The Dark", "winPct": 16, "played": 35, "won": 5.5, "notes": "**" }
-  ]
+    {
+      "team": "5 Sticks & A Rack",
+      "winPct": 68,
+      "played": 60,
+      "won": 41,
+      "notes": "*"
+    },
+    {
+      "team": "8 Ball Express",
+      "winPct": 63,
+      "played": 60,
+      "won": 37.5,
+      "notes": ""
+    },
+    {
+      "team": "Below Average",
+      "winPct": 59,
+      "played": 60,
+      "won": 35.5,
+      "notes": ""
+    },
+    {
+      "team": "Outsiders",
+      "winPct": 58,
+      "played": 60,
+      "won": 35,
+      "notes": "*"
+    },
+    {
+      "team": "Miller Time",
+      "winPct": 55,
+      "played": 60,
+      "won": 33,
+      "notes": "**"
+    },
+    {
+      "team": "Shooting Blanks",
+      "winPct": 52,
+      "played": 60,
+      "won": 31,
+      "notes": ""
+    },
+    {
+      "team": "Back Side",
+      "winPct": 49,
+      "played": 60,
+      "won": 29.5,
+      "notes": ""
+    },
+    {
+      "team": "Gone Country",
+      "winPct": 36,
+      "played": 60,
+      "won": 21.5,
+      "notes": "*"
+    },
+    {
+      "team": "Shot In The Dark",
+      "winPct": 30,
+      "played": 60,
+      "won": 18,
+      "notes": "**"
+    },
+    {
+      "team": "8 In The Hole",
+      "winPct": 30,
+      "played": 60,
+      "won": 18,
+      "notes": ""
+    }
+  ],
+  "week": 12
 }

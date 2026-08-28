@@ -137,7 +137,8 @@ export default async function LeaguePage({ params }) {
     const data = getPoolData(league.data);
     metaLine =
       `${league.day} · ${league.game}` +
-      (data?.updated ? ` · Last updated ${data.updated}` : "");
+      (data?.week ? ` · Week ${data.week}` : "") +
+      (data?.updated ? ` · Updated ${data.updated}` : "");
     deadline = data?.statsDeadline ? <DeadlineAlert text={data.statsDeadline} /> : null;
     standings = data?.standings?.length ? (
       <PoolStandingsPanel data={data} />

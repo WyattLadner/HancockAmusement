@@ -1,89 +1,60 @@
 #!/usr/bin/env node
 /**
- * Pool standings ingest — SCAFFOLD / STUB (parser not built yet).
+ * Pool standings ingest (CLI) — parses Caleb's pool workbook (e.g. "POOLA 26.xlsx")
+ * and writes the standings JSON the site renders (data/pool/<key>.json).
  *
- * WHY THIS IS A STUB
- * ------------------
- * Pool results today flow: recorded manually → sent to Caleb → Caleb types them into
- * Excel → exported as PNG/PDF and uploaded to Wix. The goal is to let Caleb drop the
- * file he's sent into an inbox and have the site update. Whether that can be automatic
- * depends entirely on WHAT FORMAT he receives — which is still unknown:
+ * This is the command-line path; the same parsing runs in the browser on the /admin
+ * upload page (both use lib/poolParse.js). The workbook's "SCORE SHEET" tab holds the
+ * team standings; "SUMMARY SHEET" holds per-player win% (not ingested here yet).
  *
- *   - Structured file (Word table / Excel / CSV) → deterministic parse. Very doable.
- *   - Photo of a PRINTED sheet            → OCR + mandatory human verify.
- *   - Photo of HANDWRITTEN notes          → not reliably automatable; fix upstream.
+ * Existing metadata (statsDeadline, footnotes, makeupNotice) in the target JSON is
+ * preserved; only standings, week, updated, and source are refreshed.
  *
- * Do NOT build the parser until a real sample of Caleb's file exists. See
- * memory/league-data-discovery.md.
- *
- * THE CONTRACT (already wired up downstream)
- * ------------------------------------------
- * This script's only job is to WRITE files matching data/pool/<key>.json, whose schema
- * the site already renders (components/PoolStandings.js reads it). Row schema:
- *
- *   { "team": string, "winPct": number, "played": number, "won": number, "notes": "" | "*" | "**" }
- *
- * File schema: { league, updated, source, statsDeadline, footnotes[], makeupNotice, standings[] }
- *
- * INTENDED FLOW (once the input format is known)
- * ----------------------------------------------
- *   1. Read a dropped source file from an inbox (path via CLI arg or a watched folder).
- *   2. Parse it into the row schema above (parser TBD, format-dependent).
- *   3. Write data/pool/<key>.json.
- *   4. Caleb reviews a preview, then it publishes (commit/deploy). Human verify is
- *      REQUIRED before standings change — never auto-publish unverified OCR output.
- *
- * Usage (once implemented):  node scripts/ingest-pool.mjs <sourceFile> <key>
+ * Usage:  node scripts/ingest-pool.mjs "<path/to/POOLA 26.xlsx>" <key>
+ *   e.g.  node scripts/ingest-pool.mjs "./POOLA 26.xlsx" wednesday-a
  */
-
-import { writeFile } from "node:fs/promises";
+import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
+import { fileURLToPath } from "node:url";
+import { parseScoreSheet } from "../lib/poolParse.js";
+
+const require = createRequire(import.meta.url);
+const XLSX = require("xlsx"); // SheetJS ships CJS; load it via require in ESM.
 
 const DATA_DIR = path.join(process.cwd(), "data", "pool");
 
-/** Validate a standings row against the contract the site renders. */
-export function validateRow(row) {
-  const errors = [];
-  if (!row || typeof row.team !== "string" || !row.team.trim())
-    errors.push("team must be a non-empty string");
-  for (const k of ["winPct", "played", "won"]) {
-    if (typeof row[k] !== "number" || Number.isNaN(row[k]))
-      errors.push(`${k} must be a number`);
-  }
-  if (row.notes !== undefined && !["", "*", "**"].includes(row.notes))
-    errors.push('notes must be "", "*", or "**"');
-  return errors;
+function scoreSheetRows(wb) {
+  const name = wb.SheetNames.find((n) => /score\s*sheet/i.test(n));
+  if (!name) throw new Error('No "SCORE SHEET" tab found');
+  return XLSX.utils.sheet_to_json(wb.Sheets[name], { header: 1, blankrows: false, defval: "" });
 }
 
-/** Write a validated standings payload to data/pool/<key>.json. */
-export async function writePoolData(key, payload) {
-  if (!Array.isArray(payload?.standings))
-    throw new Error("payload.standings must be an array");
-  const rowErrors = payload.standings.flatMap((r, i) =>
-    validateRow(r).map((e) => `row ${i}: ${e}`)
-  );
-  if (rowErrors.length)
-    throw new Error("Invalid standings:\n" + rowErrors.join("\n"));
-
+export function writePoolData(key, parsed) {
   const file = path.join(DATA_DIR, `${key}.json`);
-  await writeFile(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
-  return file;
+  let existing = {};
+  try { existing = JSON.parse(fs.readFileSync(file, "utf8")); } catch { /* new file */ }
+  const payload = {
+    ...existing,
+    source: "xlsx",
+    week: parsed.week ?? existing.week ?? null,
+    updated: new Date().toISOString().slice(0, 10),
+    standings: parsed.standings,
+  };
+  delete payload._comment;
+  fs.writeFileSync(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
+  return { file, count: parsed.standings.length, week: payload.week };
 }
 
 function main() {
-  console.error(
-    [
-      "pool ingest is not implemented yet — this is a scaffold.",
-      "Blocked on a real sample of the file Caleb receives (format unknown).",
-      "The data contract and downstream rendering are already in place;",
-      "only the source-file parser remains. See the comment block in this file.",
-    ].join("\n")
-  );
-  process.exit(1);
+  const [srcArg, key] = process.argv.slice(2);
+  if (!srcArg || !key) {
+    console.error('Usage: node scripts/ingest-pool.mjs "<path to .xlsx>" <key>');
+    process.exit(1);
+  }
+  const parsed = parseScoreSheet(scoreSheetRows(XLSX.readFile(srcArg)));
+  const res = writePoolData(key, parsed);
+  console.log(`Wrote ${res.file}: ${res.count} teams, week ${res.week}`);
 }
 
-// Only run the CLI guard when executed directly (not when imported for its helpers).
-import { fileURLToPath } from "node:url";
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  main();
-}
+if (process.argv[1] === fileURLToPath(import.meta.url)) main();
