@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { parseScoreSheet } from "@/lib/poolParse";
+import { parseScoreSheet, parsePlayers, isTeamTab } from "@/lib/poolParse";
 import PoolStandings from "@/components/PoolStandings";
+import PoolPlayers from "@/components/PoolPlayers";
 
 const LEAGUES = [
   { key: "wednesday-a", label: "Wednesday A Division Pool" },
@@ -32,9 +33,12 @@ export default function AdminPage() {
       const wb = XLSX.read(buf, { type: "array" });
       const sheet = wb.SheetNames.find((n) => /score\s*sheet/i.test(n));
       if (!sheet) throw new Error('No "SCORE SHEET" tab found in this workbook.');
-      const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheet], { header: 1, blankrows: false, defval: "" });
-      const { week, standings } = parseScoreSheet(rows);
-      setParsed({ week, standings, fileName: file.name });
+      const toRows = (ws) => XLSX.utils.sheet_to_json(ws, { header: 1, blankrows: false, defval: "" });
+      const { week, standings } = parseScoreSheet(toRows(wb.Sheets[sheet]));
+      const rowsByTeam = {};
+      for (const n of wb.SheetNames) if (isTeamTab(n)) rowsByTeam[n] = toRows(wb.Sheets[n]);
+      const players = parsePlayers(rowsByTeam);
+      setParsed({ week, standings, players, fileName: file.name });
     } catch (err) {
       setStatus({ type: "error", msg: err.message || "Could not read that file." });
     }
@@ -52,7 +56,7 @@ export default function AdminPage() {
       const res = await fetch("/api/pool/publish", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key: leagueKey, password, week: parsed.week, standings: parsed.standings }),
+        body: JSON.stringify({ key: leagueKey, password, week: parsed.week, standings: parsed.standings, players: parsed.players }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `Publish failed (${res.status}).`);
@@ -112,9 +116,18 @@ export default function AdminPage() {
             <h2 className="font-display font-bold uppercase tracking-wide text-2xl">
               Preview{parsed.week ? ` — Week ${parsed.week}` : ""}
             </h2>
-            <span className="text-sm text-smoke">{parsed.standings.length} teams · {parsed.fileName}</span>
+            <span className="text-sm text-smoke">
+              {parsed.standings.length} teams
+              {parsed.players?.length ? ` · ${parsed.players.reduce((n, t) => n + t.players.length, 0)} players` : ""} · {parsed.fileName}
+            </span>
           </div>
           <PoolStandings standings={parsed.standings} />
+          {parsed.players?.length ? (
+            <>
+              <h3 className="font-display font-bold uppercase tracking-wide text-xl mt-8 mb-4">Player Stats</h3>
+              <PoolPlayers teams={parsed.players} />
+            </>
+          ) : null}
           <button
             type="button"
             onClick={publish}

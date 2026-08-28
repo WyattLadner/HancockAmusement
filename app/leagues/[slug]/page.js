@@ -6,6 +6,7 @@ import { getPoolData } from "@/lib/pool";
 import { getSchedule, getRules } from "@/lib/leagueContent";
 import DartsStandings from "@/components/DartsStandings";
 import PoolStandings from "@/components/PoolStandings";
+import PoolPlayers from "@/components/PoolPlayers";
 import ScheduleTable from "@/components/ScheduleTable";
 import RulesContent from "@/components/RulesContent";
 import LeagueTabs from "@/components/LeagueTabs";
@@ -108,6 +109,7 @@ export default async function LeaguePage({ params }) {
   let metaLine;
   let deadline = null;
   let standings;
+  let playersContent = null;
 
   if (league.type === "darts") {
     let report = null;
@@ -145,6 +147,7 @@ export default async function LeaguePage({ params }) {
     ) : (
       <ComingSoon label="Standings for this division will post here soon." />
     );
+    playersContent = data?.players?.length ? <PoolPlayers teams={data.players} /> : null;
   }
 
   const schedule = getSchedule(slug);
@@ -152,6 +155,7 @@ export default async function LeaguePage({ params }) {
 
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
+    { id: "players", label: "Player Stats", content: playersContent },
     { id: "schedule", label: "Schedule", content: schedule ? <ScheduleTable schedule={schedule} /> : null },
     { id: "rules", label: "Rules", content: rules ? <RulesContent markdown={rules} /> : null },
   ];

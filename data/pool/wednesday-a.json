@@ -86,5 +86,381 @@
       "notes": ""
     }
   ],
-  "week": 12
+  "week": 12,
+  "players": [
+    {
+      "team": "Gone Country",
+      "players": [
+        {
+          "name": "Steve",
+          "winPct": 78,
+          "wins": 374,
+          "games": 480
+        },
+        {
+          "name": "Wayne",
+          "winPct": 76,
+          "wins": 363,
+          "games": 480
+        },
+        {
+          "name": "Don",
+          "winPct": 70,
+          "wins": 307,
+          "games": 440
+        },
+        {
+          "name": "Albert",
+          "winPct": 59,
+          "wins": 281,
+          "games": 480
+        }
+      ]
+    },
+    {
+      "team": "Below Average",
+      "players": [
+        {
+          "name": "Clint(8)",
+          "winPct": 89,
+          "wins": 482,
+          "games": 540
+        },
+        {
+          "name": "Tommy(8x2)(Br)",
+          "winPct": 83,
+          "wins": 547,
+          "games": 660
+        },
+        {
+          "name": "Gus(Br)",
+          "winPct": 79,
+          "wins": 471,
+          "games": 600
+        },
+        {
+          "name": "Tom",
+          "winPct": 76,
+          "wins": 426,
+          "games": 560
+        },
+        {
+          "name": "Buddy(8)",
+          "winPct": 72,
+          "wins": 405,
+          "games": 560
+        }
+      ]
+    },
+    {
+      "team": "Outsiders",
+      "players": [
+        {
+          "name": "Shane",
+          "winPct": 92,
+          "wins": 184,
+          "games": 200
+        },
+        {
+          "name": "Bradley(Brx3)",
+          "winPct": 86,
+          "wins": 549,
+          "games": 640
+        },
+        {
+          "name": "Mike (Brx2)",
+          "winPct": 84,
+          "wins": 568,
+          "games": 680
+        },
+        {
+          "name": "Chris",
+          "winPct": 82,
+          "wins": 395,
+          "games": 480
+        },
+        {
+          "name": "Eugene",
+          "winPct": 75,
+          "wins": 179,
+          "games": 240
+        },
+        {
+          "name": "Donnie",
+          "winPct": 72,
+          "wins": 447,
+          "games": 620
+        }
+      ]
+    },
+    {
+      "team": "Miller Time",
+      "players": [
+        {
+          "name": "Paul(Br)",
+          "winPct": 80,
+          "wins": 399,
+          "games": 500
+        },
+        {
+          "name": "John",
+          "winPct": 78,
+          "wins": 501,
+          "games": 640
+        },
+        {
+          "name": "Mike(Br)",
+          "winPct": 77,
+          "wins": 479,
+          "games": 620
+        },
+        {
+          "name": "Desmond(8)",
+          "winPct": 77,
+          "wins": 402,
+          "games": 520
+        },
+        {
+          "name": "Rex(8)(Br)",
+          "winPct": 74,
+          "wins": 416,
+          "games": 560
+        }
+      ]
+    },
+    {
+      "team": "8 Ball Express",
+      "players": [
+        {
+          "name": "Nick(Br)",
+          "winPct": 85,
+          "wins": 544,
+          "games": 640
+        },
+        {
+          "name": "Austin(Br)",
+          "winPct": 85,
+          "wins": 204,
+          "games": 240
+        },
+        {
+          "name": "Buckie",
+          "winPct": 80,
+          "wins": 498,
+          "games": 620
+        },
+        {
+          "name": "Gene(8)",
+          "winPct": 79,
+          "wins": 410,
+          "games": 520
+        },
+        {
+          "name": "Jeff",
+          "winPct": 78,
+          "wins": 499,
+          "games": 640
+        },
+        {
+          "name": "Bubba(8)",
+          "winPct": 76,
+          "wins": 348,
+          "games": 460
+        }
+      ]
+    },
+    {
+      "team": "Back Side",
+      "players": [
+        {
+          "name": "Chris(8)",
+          "winPct": 100,
+          "wins": 40,
+          "games": 40
+        },
+        {
+          "name": "Chip(Br)",
+          "winPct": 80,
+          "wins": 515,
+          "games": 640
+        },
+        {
+          "name": "Joe",
+          "winPct": 78,
+          "wins": 533,
+          "games": 680
+        },
+        {
+          "name": "Sean",
+          "winPct": 73,
+          "wins": 176,
+          "games": 240
+        },
+        {
+          "name": "Danny",
+          "winPct": 71,
+          "wins": 486,
+          "games": 680
+        },
+        {
+          "name": "Holly",
+          "winPct": 68,
+          "wins": 299,
+          "games": 440
+        }
+      ]
+    },
+    {
+      "team": "5 Sticks N Rack",
+      "players": [
+        {
+          "name": "Bryan B(8)",
+          "winPct": 78,
+          "wins": 470,
+          "games": 600
+        },
+        {
+          "name": "Jullio",
+          "winPct": 78,
+          "wins": 219,
+          "games": 280
+        },
+        {
+          "name": "Noah(8)",
+          "winPct": 74,
+          "wins": 444,
+          "games": 600
+        },
+        {
+          "name": "Chris(8)",
+          "winPct": 73,
+          "wins": 466,
+          "games": 640
+        },
+        {
+          "name": "Tee",
+          "winPct": 72,
+          "wins": 373,
+          "games": 520
+        },
+        {
+          "name": "Tom",
+          "winPct": 70,
+          "wins": 309,
+          "games": 440
+        }
+      ]
+    },
+    {
+      "team": "8 In The Hole",
+      "players": [
+        {
+          "name": "V.J.",
+          "winPct": 75,
+          "wins": 358,
+          "games": 480
+        },
+        {
+          "name": "Kojack",
+          "winPct": 72,
+          "wins": 347,
+          "games": 480
+        },
+        {
+          "name": "Jeremy",
+          "winPct": 71,
+          "wins": 284,
+          "games": 400
+        },
+        {
+          "name": "Paul",
+          "winPct": 60,
+          "wins": 238,
+          "games": 400
+        },
+        {
+          "name": "Cheryl",
+          "winPct": 55,
+          "wins": 88,
+          "games": 160
+        }
+      ]
+    },
+    {
+      "team": "Shootin Blanks",
+      "players": [
+        {
+          "name": "Billy(8)",
+          "winPct": 83,
+          "wins": 565,
+          "games": 680
+        },
+        {
+          "name": "Jojo(8x2)",
+          "winPct": 78,
+          "wins": 530,
+          "games": 680
+        },
+        {
+          "name": "Gerald",
+          "winPct": 77,
+          "wins": 245,
+          "games": 320
+        },
+        {
+          "name": "Jonathan",
+          "winPct": 70,
+          "wins": 418,
+          "games": 600
+        },
+        {
+          "name": "Howard",
+          "winPct": 62,
+          "wins": 394,
+          "games": 640
+        }
+      ]
+    },
+    {
+      "team": "Shot In The Dark",
+      "players": [
+        {
+          "name": "David",
+          "winPct": 74,
+          "wins": 148,
+          "games": 200
+        },
+        {
+          "name": "Mark",
+          "winPct": 73,
+          "wins": 352,
+          "games": 480
+        },
+        {
+          "name": "Gabby",
+          "winPct": 71,
+          "wins": 85,
+          "games": 120
+        },
+        {
+          "name": "Danny",
+          "winPct": 63,
+          "wins": 202,
+          "games": 320
+        },
+        {
+          "name": "Rick",
+          "winPct": 62,
+          "wins": 148,
+          "games": 240
+        },
+        {
+          "name": "Brian",
+          "winPct": 58,
+          "wins": 277,
+          "games": 480
+        }
+      ]
+    }
+  ]
 }

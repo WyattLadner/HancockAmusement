@@ -37,7 +37,7 @@ export async function POST(req) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { key, password, week, standings } = body || {};
+  const { key, password, week, standings, players } = body || {};
   if (password !== adminPassword) {
     return NextResponse.json({ error: "Wrong password." }, { status: 401 });
   }
@@ -74,6 +74,7 @@ export async function POST(req) {
       week: week ?? existing.week ?? null,
       updated: new Date().toISOString().slice(0, 10),
       standings,
+      players: Array.isArray(players) ? players : existing.players ?? [],
     };
     delete merged._comment;
 

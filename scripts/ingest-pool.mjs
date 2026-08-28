@@ -17,17 +17,27 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
-import { parseScoreSheet } from "../lib/poolParse.js";
+import { parseScoreSheet, parsePlayers, isTeamTab } from "../lib/poolParse.js";
 
 const require = createRequire(import.meta.url);
 const XLSX = require("xlsx"); // SheetJS ships CJS; load it via require in ESM.
 
 const DATA_DIR = path.join(process.cwd(), "data", "pool");
 
+const toRows = (ws) => XLSX.utils.sheet_to_json(ws, { header: 1, blankrows: false, defval: "" });
+
 function scoreSheetRows(wb) {
   const name = wb.SheetNames.find((n) => /score\s*sheet/i.test(n));
   if (!name) throw new Error('No "SCORE SHEET" tab found');
-  return XLSX.utils.sheet_to_json(wb.Sheets[name], { header: 1, blankrows: false, defval: "" });
+  return toRows(wb.Sheets[name]);
+}
+
+function playersFromWorkbook(wb) {
+  const rowsByTeam = {};
+  for (const name of wb.SheetNames) {
+    if (isTeamTab(name)) rowsByTeam[name] = toRows(wb.Sheets[name]);
+  }
+  return parsePlayers(rowsByTeam);
 }
 
 export function writePoolData(key, parsed) {
@@ -40,10 +50,11 @@ export function writePoolData(key, parsed) {
     week: parsed.week ?? existing.week ?? null,
     updated: new Date().toISOString().slice(0, 10),
     standings: parsed.standings,
+    players: parsed.players ?? existing.players ?? [],
   };
   delete payload._comment;
   fs.writeFileSync(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
-  return { file, count: parsed.standings.length, week: payload.week };
+  return { file, count: parsed.standings.length, week: payload.week, players: (payload.players || []).reduce((n, t) => n + t.players.length, 0) };
 }
 
 function main() {
@@ -52,9 +63,11 @@ function main() {
     console.error('Usage: node scripts/ingest-pool.mjs "<path to .xlsx>" <key>');
     process.exit(1);
   }
-  const parsed = parseScoreSheet(scoreSheetRows(XLSX.readFile(srcArg)));
+  const wb = XLSX.readFile(srcArg);
+  const parsed = parseScoreSheet(scoreSheetRows(wb));
+  parsed.players = playersFromWorkbook(wb);
   const res = writePoolData(key, parsed);
-  console.log(`Wrote ${res.file}: ${res.count} teams, week ${res.week}`);
+  console.log(`Wrote ${res.file}: ${res.count} teams, ${res.players} players, week ${res.week}`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) main();
