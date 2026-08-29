@@ -152,13 +152,23 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {SERVICES.map((s) => (
               <article key={s.title} className="rounded-lg overflow-hidden border border-line bg-surface-2">
-                <div className={`relative aspect-video ${s.fit === "contain" ? "bg-surface" : ""}`}>
+                <div className="relative aspect-video overflow-hidden">
+                  {s.fit === "contain" ? (
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "radial-gradient(ellipse at 50% 40%, #18305a 0%, #0A1422 70%)" }}
+                    />
+                  ) : null}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.img}
                     alt={s.alt}
                     loading="lazy"
-                    className={`absolute inset-0 w-full h-full ${s.fit === "contain" ? "object-contain p-4" : "object-cover"}`}
+                    className={
+                      s.fit === "contain"
+                        ? "absolute inset-0 w-full h-full object-contain p-2 drop-shadow-[0_12px_28px_rgba(0,0,0,0.55)]"
+                        : "absolute inset-0 w-full h-full object-cover"
+                    }
                     width={800}
                     height={450}
                   />
