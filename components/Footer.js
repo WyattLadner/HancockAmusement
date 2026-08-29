@@ -16,7 +16,7 @@ export default function Footer() {
               alt="Hancock Amusement"
               width={95}
               height={73}
-              className="h-16 w-auto mb-4"
+              className="h-20 md:h-24 w-auto mb-4"
             />
             <p className="text-sm text-smoke leading-relaxed">
               Commission amusement equipment and ATM placement for bars and venues across{" "}
