@@ -3,11 +3,10 @@ import { notFound } from "next/navigation";
 import { leagues, getLeague, reportUrl } from "@/lib/leagues";
 import { fetchReport } from "@/lib/leagueleader";
 import { getPoolData } from "@/lib/pool";
-import { getSchedule, getRules } from "@/lib/leagueContent";
+import { getRules } from "@/lib/leagueContent";
 import DartsStandings from "@/components/DartsStandings";
 import PoolStandings from "@/components/PoolStandings";
 import PoolPlayers from "@/components/PoolPlayers";
-import ScheduleTable from "@/components/ScheduleTable";
 import RulesContent from "@/components/RulesContent";
 import PdfDoc from "@/components/PdfDoc";
 import LeagueTabs from "@/components/LeagueTabs";
@@ -151,7 +150,6 @@ export default async function LeaguePage({ params }) {
     playersContent = data?.players?.length ? <PoolPlayers teams={data.players} /> : null;
   }
 
-  const schedule = getSchedule(slug);
   const isPool = league.type !== "darts";
 
   // Darts rules render natively; pool rules are a Caleb-managed PDF.
@@ -165,7 +163,7 @@ export default async function LeaguePage({ params }) {
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
     { id: "players", label: "Player Stats", content: playersContent },
-    { id: "schedule", label: "Schedule", content: schedule ? <ScheduleTable schedule={schedule} /> : null },
+    { id: "schedule", label: "Schedule", content: <PdfDoc url={`/docs/schedule-${slug}.pdf`} title="Season Schedule" note="Full season matchups and venues." /> },
     { id: "rules", label: "Rules", content: rulesContent },
   ];
 

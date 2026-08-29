@@ -4,11 +4,19 @@ import { NextResponse } from "next/server";
 // public/docs/ in the repo, which triggers a Vercel redeploy. Gated by ADMIN_PASSWORD.
 export const runtime = "nodejs";
 
-// Doc type -> committed path + a friendly label for the commit message.
+// Fixed (site-wide) documents: doc type -> committed path + label.
 const DOCS = {
   "pool-rules": { path: "public/docs/pool-rules.pdf", label: "pool rules" },
   "score-sheet": { path: "public/docs/pool-score-sheet.pdf", label: "score sheet" },
 };
+// Schedules are per-league; the "schedule" docType requires a valid league slug.
+const SCHEDULE_LEAGUES = new Set([
+  "wednesday-a-pool",
+  "wednesday-b-pool",
+  "tuesday-dart",
+  "remote-monday-cash",
+  "remote-thursday-cash",
+]);
 const REPO = process.env.GITHUB_REPO || "WyattLadner/HancockAmusement";
 const BRANCH = process.env.GITHUB_BRANCH || "main";
 const MAX_BYTES = 8 * 1024 * 1024; // 8 MB cap
@@ -40,9 +48,18 @@ export async function POST(req) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { docType, password, contentBase64 } = body || {};
+  const { docType, password, contentBase64, league } = body || {};
   if (password !== adminPassword) return NextResponse.json({ error: "Wrong password." }, { status: 401 });
-  const doc = DOCS[docType];
+
+  let doc;
+  if (docType === "schedule") {
+    if (!SCHEDULE_LEAGUES.has(league)) {
+      return NextResponse.json({ error: "Pick a valid league for the schedule." }, { status: 400 });
+    }
+    doc = { path: `public/docs/schedule-${league}.pdf`, label: `${league} schedule` };
+  } else {
+    doc = DOCS[docType];
+  }
   if (!doc) return NextResponse.json({ error: "Unknown document type." }, { status: 400 });
   if (typeof contentBase64 !== "string" || !contentBase64) {
     return NextResponse.json({ error: "No file provided." }, { status: 400 });

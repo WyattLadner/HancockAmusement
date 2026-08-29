@@ -12,6 +12,15 @@ const LEAGUES = [
 const DOC_TYPES = [
   { key: "pool-rules", label: "Pool Rules (PDF)" },
   { key: "score-sheet", label: "Blank Score Sheet (PDF)" },
+  { key: "schedule", label: "League Schedule (PDF)" },
+];
+// All five leagues — schedules are per-league.
+const ALL_LEAGUES = [
+  { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
+  { slug: "tuesday-dart", label: "Tuesday Dart League" },
+  { slug: "wednesday-a-pool", label: "Wednesday A Division Pool" },
+  { slug: "wednesday-b-pool", label: "Wednesday B Division Pool" },
+  { slug: "remote-thursday-cash", label: "Remote Thursday Cash League" },
 ];
 
 const inputClass =
@@ -49,6 +58,7 @@ export default function AdminPage() {
 
   // Document uploader
   const [docType, setDocType] = useState("pool-rules");
+  const [scheduleLeague, setScheduleLeague] = useState("wednesday-a-pool");
   const [docFile, setDocFile] = useState(null);
   const [docStatus, setDocStatus] = useState(null);
   const [docBusy, setDocBusy] = useState(false);
@@ -107,7 +117,7 @@ export default function AdminPage() {
       const res = await fetch("/api/pool/publish-doc", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ docType, password, contentBase64 }),
+        body: JSON.stringify({ docType, password, contentBase64, league: scheduleLeague }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `Upload failed (${res.status}).`);
@@ -172,7 +182,7 @@ export default function AdminPage() {
       ) : null}
 
       {/* Documents */}
-      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Rules &amp; Score Sheet</h2>
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Rules, Schedule &amp; Score Sheet</h2>
       <div className={cardClass}>
         <div>
           <label htmlFor="docType" className={labelClass}>Which document</label>
@@ -180,10 +190,21 @@ export default function AdminPage() {
             {DOC_TYPES.map((d) => <option key={d.key} value={d.key}>{d.label}</option>)}
           </select>
           <p className="mt-2 text-sm text-smoke">
-            <strong className="text-chalk">Pool Rules</strong> = the rulebook shown on the pool pages.{" "}
-            <strong className="text-chalk">Blank Score Sheet</strong> = the empty sheet teams print to record a match.
+            <strong className="text-chalk">Pool Rules</strong> = the rulebook on the pool pages.{" "}
+            <strong className="text-chalk">Blank Score Sheet</strong> = the empty sheet teams print.{" "}
+            <strong className="text-chalk">League Schedule</strong> = a league&rsquo;s season schedule (pick the league below).
           </p>
         </div>
+
+        {docType === "schedule" ? (
+          <div>
+            <label htmlFor="scheduleLeague" className={labelClass}>Which league</label>
+            <select id="scheduleLeague" value={scheduleLeague} onChange={(e) => { setScheduleLeague(e.target.value); setDocStatus(null); }} className={inputClass}>
+              {ALL_LEAGUES.map((l) => <option key={l.slug} value={l.slug}>{l.label}</option>)}
+            </select>
+          </div>
+        ) : null}
+
         <div>
           <label htmlFor="docFile" className={labelClass}>Choose the new PDF</label>
           <input id="docFile" type="file" accept="application/pdf,.pdf" onChange={(e) => { setDocFile(e.target.files?.[0] || null); setDocStatus(null); }}
