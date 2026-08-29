@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 md:h-24 flex items-center justify-between gap-4">
         <Link
           href="/"
           className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded-md"
@@ -31,7 +31,7 @@ export default function Header() {
             alt="Hancock Amusement"
             width={95}
             height={73}
-            className="h-12 md:h-14 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
         </Link>
 

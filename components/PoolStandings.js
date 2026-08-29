@@ -47,7 +47,7 @@ export default function PoolStandings({ standings = [] }) {
       <div className="hidden sm:block rounded-lg border border-line">
         <table className="w-full text-sm md:text-base tabular-nums">
           <thead>
-            <tr className="bg-surface-2 sticky top-16 md:top-20 z-10">
+            <tr className="bg-surface-2 sticky top-20 md:top-24 z-10">
               <th scope="col" className="px-4 py-3 text-left font-display font-bold uppercase tracking-wide text-xs md:text-sm text-smoke">
                 #
               </th>
