@@ -51,7 +51,9 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Hancock Amusement · A Family Owned &amp; Managed Business</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className={linkClass}>Privacy Policy</Link>
-            <span>Site by Ladner Web Systems</span>
+            <a href="https://ladnerwebsystems.com" target="_blank" rel="noopener noreferrer" className={linkClass}>
+              Site by Ladner Web Systems
+            </a>
           </div>
         </div>
       </div>
