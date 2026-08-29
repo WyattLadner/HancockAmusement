@@ -165,29 +165,41 @@ export default function AdminPage() {
             </>
           ) : null}
           <button type="button" onClick={publish} disabled={busy} className={`mt-8 w-full sm:w-auto ${btnClass}`}>
-            {busy ? "Publishing…" : "Publish standings →"}
+            {busy ? "Publishing…" : "Publish standings to the site →"}
           </button>
+          <p className="mt-2 text-sm text-smoke">Updates the live standings + player stats (in a minute or two).</p>
         </div>
       ) : null}
 
       {/* Documents */}
-      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Documents</h2>
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Rules &amp; Score Sheet</h2>
       <div className={cardClass}>
         <div>
-          <label htmlFor="docType" className={labelClass}>Document</label>
+          <label htmlFor="docType" className={labelClass}>Which document</label>
           <select id="docType" value={docType} onChange={(e) => { setDocType(e.target.value); setDocStatus(null); }} className={inputClass}>
             {DOC_TYPES.map((d) => <option key={d.key} value={d.key}>{d.label}</option>)}
           </select>
+          <p className="mt-2 text-sm text-smoke">
+            <strong className="text-chalk">Pool Rules</strong> = the rulebook shown on the pool pages.{" "}
+            <strong className="text-chalk">Blank Score Sheet</strong> = the empty sheet teams print to record a match.
+          </p>
         </div>
         <div>
-          <label htmlFor="docFile" className={labelClass}>PDF file</label>
+          <label htmlFor="docFile" className={labelClass}>Choose the new PDF</label>
           <input id="docFile" type="file" accept="application/pdf,.pdf" onChange={(e) => { setDocFile(e.target.files?.[0] || null); setDocStatus(null); }}
             className="block w-full text-sm text-smoke file:mr-4 file:rounded-md file:border-0 file:bg-red file:text-ink file:font-display file:font-bold file:uppercase file:tracking-wide file:px-4 file:py-2.5 hover:file:bg-red/90" />
         </div>
+      </div>
+
+      {/* Apply button — separated from the card so it's clearly the "publish to the site" action */}
+      <div className="mt-6">
         <Status status={docStatus} />
-        <button type="button" onClick={uploadDoc} disabled={docBusy} className={`w-full sm:w-auto ${btnClass}`}>
-          {docBusy ? "Uploading…" : "Upload document →"}
+        <button type="button" onClick={uploadDoc} disabled={docBusy} className={`mt-3 w-full sm:w-auto ${btnClass}`}>
+          {docBusy ? "Uploading…" : "Publish this document to the site →"}
         </button>
+        <p className="mt-2 text-sm text-smoke">
+          Replaces the selected PDF on the live hancockamusement.com pages (updates in a minute or two).
+        </p>
       </div>
     </div>
   );

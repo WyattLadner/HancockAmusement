@@ -7,20 +7,23 @@ const SERVICES = [
   {
     title: "Equipment Placement",
     copy: "Pool tables, darts, jukeboxes and arcade games for your bar or venue.",
-    img: "/images/svc-commission.jpg",
-    alt: "Pool table installed in a venue",
+    img: "/images/svc-jukebox.jpg",
+    alt: "Jukebox",
+    fit: "cover",
   },
   {
     title: "Sales & Leasing",
     copy: "Buy or lease equipment outright, including ATM machines.",
-    img: "/images/svc-leasing.jpg",
-    alt: "Electronic dartboard cabinet",
+    img: "/images/svc-darts.png",
+    alt: "Arachnid G3 Fire electronic dartboard",
+    fit: "contain",
   },
   {
     title: "ATM Machines",
     copy: "Keep cash on the floor and in your register. Sales, leasing and service.",
-    img: "/images/svc-atm.jpg",
-    alt: "ATM in a bar setting",
+    img: "/images/svc-atm.png",
+    alt: "Triton ATM",
+    fit: "contain",
   },
 ];
 
@@ -149,10 +152,19 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {SERVICES.map((s) => (
               <article key={s.title} className="rounded-lg overflow-hidden border border-line bg-surface-2">
-                <div className="relative aspect-video">
+                <div className={`relative aspect-video ${s.fit === "contain" ? "bg-surface" : ""}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={s.img} alt={s.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover" width={800} height={450} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
+                  <img
+                    src={s.img}
+                    alt={s.alt}
+                    loading="lazy"
+                    className={`absolute inset-0 w-full h-full ${s.fit === "contain" ? "object-contain p-4" : "object-cover"}`}
+                    width={800}
+                    height={450}
+                  />
+                  {s.fit !== "contain" ? (
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
+                  ) : null}
                 </div>
                 <div className="p-5 md:p-6">
                   <h3 className="font-display font-bold uppercase tracking-wide text-xl mb-2">{s.title}</h3>

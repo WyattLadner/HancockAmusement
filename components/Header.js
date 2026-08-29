@@ -27,11 +27,11 @@ export default function Header() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo-header.png"
+            src="/images/hancock-amusement-logo.png"
             alt="Hancock Amusement"
-            width={105}
-            height={55}
-            className="h-10 md:h-12 w-auto"
+            width={95}
+            height={73}
+            className="h-12 md:h-14 w-auto"
           />
         </Link>
 

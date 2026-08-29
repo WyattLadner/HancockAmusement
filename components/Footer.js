@@ -12,11 +12,11 @@ export default function Footer() {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/logo-header.png"
+              src="/images/hancock-amusement-logo.png"
               alt="Hancock Amusement"
-              width={105}
-              height={55}
-              className="h-14 w-auto mb-4"
+              width={95}
+              height={73}
+              className="h-16 w-auto mb-4"
             />
             <p className="text-sm text-smoke leading-relaxed">
               Commission amusement equipment and ATM placement for bars and venues across{" "}
