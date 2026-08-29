@@ -9,21 +9,18 @@ const SERVICES = [
     copy: "Pool tables, darts, jukeboxes and arcade games for your bar or venue.",
     img: "/images/svc-jukebox.jpg",
     alt: "Jukebox",
-    fit: "cover",
   },
   {
     title: "Sales & Leasing",
     copy: "Buy or lease equipment outright, including ATM machines.",
     img: "/images/svc-darts.png",
     alt: "Arachnid G3 Fire electronic dartboard",
-    fit: "contain",
   },
   {
     title: "ATM Machines",
     copy: "Keep cash on the floor and in your register. Sales, leasing and service.",
     img: "/images/svc-atm.png",
     alt: "Triton ATM",
-    fit: "contain",
   },
 ];
 
@@ -153,28 +150,16 @@ export default function Home() {
             {SERVICES.map((s) => (
               <article key={s.title} className="rounded-lg overflow-hidden border border-line bg-surface-2">
                 <div className="relative aspect-video overflow-hidden">
-                  {s.fit === "contain" ? (
-                    <div
-                      className="absolute inset-0"
-                      style={{ background: "radial-gradient(ellipse at 50% 40%, #18305a 0%, #0A1422 70%)" }}
-                    />
-                  ) : null}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.img}
                     alt={s.alt}
                     loading="lazy"
-                    className={
-                      s.fit === "contain"
-                        ? "absolute inset-0 w-full h-full object-contain p-2 drop-shadow-[0_12px_28px_rgba(0,0,0,0.55)]"
-                        : "absolute inset-0 w-full h-full object-cover"
-                    }
+                    className="absolute inset-0 w-full h-full object-cover object-center"
                     width={800}
                     height={450}
                   />
-                  {s.fit !== "contain" ? (
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
-                  ) : null}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
                 </div>
                 <div className="p-5 md:p-6">
                   <h3 className="font-display font-bold uppercase tracking-wide text-xl mb-2">{s.title}</h3>
