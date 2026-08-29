@@ -15,14 +15,14 @@ const SERVICES = [
     copy: "Buy or lease equipment outright, including ATM machines.",
     img: "/images/svc-darts.png",
     alt: "Arachnid G3 Fire electronic dartboard",
-    pos: "top",
+    pos: "50% 15%",
   },
   {
     title: "ATM Machines",
     copy: "Keep cash on the floor and in your register. Sales, leasing and service.",
     img: "/images/svc-atm.png",
     alt: "Triton ATM",
-    pos: "top",
+    pos: "50% 30%",
   },
 ];
 
@@ -157,7 +157,8 @@ export default function Home() {
                     src={s.img}
                     alt={s.alt}
                     loading="lazy"
-                    className={`absolute inset-0 w-full h-full object-cover ${s.pos === "top" ? "object-top" : "object-center"}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ objectPosition: s.pos || "center" }}
                     width={800}
                     height={450}
                   />
