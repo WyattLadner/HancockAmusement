@@ -48,8 +48,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-smoke text-center sm:text-left">
-          <p>© 2026 Hancock Amusement · A Family Owned &amp; Managed Business</p>
-          <p>Site by Ladner Web Systems</p>
+          <p>© {new Date().getFullYear()} Hancock Amusement · A Family Owned &amp; Managed Business</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className={linkClass}>Privacy Policy</Link>
+            <span>Site by Ladner Web Systems</span>
+          </div>
         </div>
       </div>
     </footer>

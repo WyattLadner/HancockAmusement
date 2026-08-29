@@ -91,7 +91,7 @@ export default function Home() {
               <p className="text-sm text-smoke mt-1">South MS &amp; Southeast LA</p>
             </div>
             <div>
-              <p className="font-display font-bold uppercase text-2xl md:text-3xl text-red">5 Leagues</p>
+              <p className="font-display font-bold uppercase text-2xl md:text-3xl text-red">{leagues.length} Leagues</p>
               <p className="text-sm text-smoke mt-1">running weekly</p>
             </div>
             <div>
@@ -224,7 +224,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 md:mt-10 rounded-lg bg-red text-ink px-5 md:px-6 py-4 font-display font-bold uppercase tracking-wide text-center text-sm md:text-base">
-            Thursday Remote Cash League — next season starts Thursday, July 30th.
+            New league seasons start throughout the year — text {site.phoneDisplay} to get your team in.
           </div>
         </div>
       </section>
@@ -237,8 +237,8 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 text-center">
           <h2 className="font-display font-bold uppercase tracking-wide text-3xl md:text-5xl mb-4">Play Your Way To Las Vegas</h2>
           <p className="text-base md:text-lg leading-relaxed text-chalk/90 max-w-2xl mx-auto mb-8">
-            Our cash league players compete for spots at the NDA Team Dart national championship —
-            April 8–14, 2027, Westgate Las Vegas Resort &amp; Casino.
+            Our cash league players compete for a spot at the NDA Team Dart national championship
+            in Las Vegas. Check the official site for the current event details.
           </p>
           <a
             href="https://ndadarts.com/events/team-dart-2/"
