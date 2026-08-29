@@ -127,7 +127,7 @@ export default function Home() {
             <div className="rounded-lg overflow-hidden border border-line bg-surface flex flex-col">
               <div className="relative aspect-[4/3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/league-players.jpg" alt="League night players around a table with a chalkboard scoreboard" loading="lazy" className="absolute inset-0 w-full h-full object-cover" width={1200} height={900} />
+                <img src="/images/darts-league.jpg" alt="Darts league night at the bar" loading="lazy" className="absolute inset-0 w-full h-full object-cover" width={1200} height={900} />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
               </div>
               <div className="p-6 md:p-8 flex flex-col flex-1">
