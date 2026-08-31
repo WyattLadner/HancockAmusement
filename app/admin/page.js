@@ -22,6 +22,12 @@ const ALL_LEAGUES = [
   { slug: "wednesday-b-pool", label: "Wednesday B Division Pool" },
   { slug: "remote-thursday-cash", label: "Remote Thursday Cash League" },
 ];
+// Darts leagues only — their standings come from a LeagueLeader link that changes each season.
+const DARTS_LEAGUES = [
+  { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
+  { slug: "tuesday-dart", label: "Tuesday Dart League" },
+  { slug: "remote-thursday-cash", label: "Remote Thursday Cash League" },
+];
 
 const inputClass =
   "w-full rounded-md bg-ink border border-line px-4 py-2.5 text-chalk placeholder:text-smoke/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red";
@@ -62,6 +68,12 @@ export default function AdminPage() {
   const [docFile, setDocFile] = useState(null);
   const [docStatus, setDocStatus] = useState(null);
   const [docBusy, setDocBusy] = useState(false);
+
+  // LeagueLeader link updater (darts)
+  const [reportLeague, setReportLeague] = useState("tuesday-dart");
+  const [reportUrl, setReportUrl] = useState("");
+  const [reportStatus, setReportStatus] = useState(null);
+  const [reportBusy, setReportBusy] = useState(false);
 
   async function handleFile(e) {
     setStatus(null);
@@ -127,6 +139,28 @@ export default function AdminPage() {
       setDocStatus({ type: "error", msg: err.message });
     } finally {
       setDocBusy(false);
+    }
+  }
+
+  async function updateReport() {
+    if (!reportUrl.trim()) return setReportStatus({ type: "error", msg: "Paste the League Leader link first." });
+    if (!password) return setReportStatus({ type: "error", msg: "Enter the password first." });
+    setReportBusy(true);
+    setReportStatus(null);
+    try {
+      const res = await fetch("/api/admin/report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ league: reportLeague, password, url: reportUrl.trim() }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `Update failed (${res.status}).`);
+      setReportStatus({ type: "ok", msg: "Link updated. Standings will pull from it once the site updates (a minute or two)." });
+      setReportUrl("");
+    } catch (err) {
+      setReportStatus({ type: "error", msg: err.message });
+    } finally {
+      setReportBusy(false);
     }
   }
 
@@ -221,6 +255,31 @@ export default function AdminPage() {
         <p className="mt-2 text-sm text-smoke">
           Replaces the selected PDF on the live hancockamusement.com pages (updates in a minute or two).
         </p>
+      </div>
+
+      {/* Darts LeagueLeader link */}
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Darts Standings Link</h2>
+      <div className={cardClass}>
+        <div>
+          <label htmlFor="reportLeague" className={labelClass}>Which darts league</label>
+          <select id="reportLeague" value={reportLeague} onChange={(e) => { setReportLeague(e.target.value); setReportStatus(null); }} className={inputClass}>
+            {DARTS_LEAGUES.map((l) => <option key={l.slug} value={l.slug}>{l.label}</option>)}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="reportUrl" className={labelClass}>New League Leader link</label>
+          <input id="reportUrl" type="url" value={reportUrl} onChange={(e) => { setReportUrl(e.target.value); setReportStatus(null); }}
+            className={inputClass} placeholder="https://www.leagueleader.net/sharedreport.php?operatorid=113&code=…" autoComplete="off" />
+          <p className="mt-2 text-sm text-smoke">
+            Paste the new shared-report link for this league (in League Leader: open the report → <strong className="text-chalk">Share Report</strong> → copy the link). Only needed when the season changes.
+          </p>
+        </div>
+      </div>
+      <div className="mt-6">
+        <Status status={reportStatus} />
+        <button type="button" onClick={updateReport} disabled={reportBusy} className={`mt-3 w-full sm:w-auto ${btnClass}`}>
+          {reportBusy ? "Updating…" : "Update standings link →"}
+        </button>
       </div>
     </div>
   );
