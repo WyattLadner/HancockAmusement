@@ -219,7 +219,7 @@ export default function AdminPage() {
       ) : null}
 
       {/* Documents */}
-      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Rules, Schedule &amp; Score Sheet</h2>
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Rules, Schedule, Captains &amp; Score Sheet</h2>
       <div className={cardClass}>
         <div>
           <label htmlFor="docType" className={labelClass}>Which document</label>
