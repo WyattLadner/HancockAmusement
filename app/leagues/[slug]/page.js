@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { leagues, getLeague, reportUrl } from "@/lib/leagues";
 import { fetchReport } from "@/lib/leagueleader";
 import { getPoolData } from "@/lib/pool";
-import { getRules } from "@/lib/leagueContent";
+import { getRules, publicDocUrl } from "@/lib/leagueContent";
 import DartsStandings from "@/components/DartsStandings";
 import PoolStandings from "@/components/PoolStandings";
 import PoolPlayers from "@/components/PoolPlayers";
@@ -160,10 +160,13 @@ export default async function LeaguePage({ params }) {
     <RulesContent markdown={rules} />
   ) : null;
 
+  const captainsPdf = publicDocUrl(`docs/team-captains-${slug}.pdf`);
+
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
     { id: "players", label: "Player Stats", content: playersContent },
     { id: "schedule", label: "Schedule", content: <PdfDoc url={`/docs/schedule-${slug}.pdf`} title="Season Schedule" note="Full season matchups and venues." /> },
+    { id: "captains", label: "Team Captains", content: captainsPdf ? <PdfDoc url={captainsPdf} title="Team Captains" note="Team captains and home-bar contacts." /> : null },
     { id: "rules", label: "Rules", content: rulesContent },
   ];
 

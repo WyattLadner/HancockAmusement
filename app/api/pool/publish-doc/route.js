@@ -51,12 +51,18 @@ export async function POST(req) {
   const { docType, password, contentBase64, league } = body || {};
   if (password !== adminPassword) return NextResponse.json({ error: "Wrong password." }, { status: 401 });
 
+  // Per-league PDF types (need a valid league slug).
+  const PER_LEAGUE = {
+    schedule: (l) => ({ path: `public/docs/schedule-${l}.pdf`, label: `${l} schedule` }),
+    "team-captains": (l) => ({ path: `public/docs/team-captains-${l}.pdf`, label: `${l} team captains` }),
+  };
+
   let doc;
-  if (docType === "schedule") {
+  if (PER_LEAGUE[docType]) {
     if (!SCHEDULE_LEAGUES.has(league)) {
-      return NextResponse.json({ error: "Pick a valid league for the schedule." }, { status: 400 });
+      return NextResponse.json({ error: "Pick a valid league for this document." }, { status: 400 });
     }
-    doc = { path: `public/docs/schedule-${league}.pdf`, label: `${league} schedule` };
+    doc = PER_LEAGUE[docType](league);
   } else {
     doc = DOCS[docType];
   }

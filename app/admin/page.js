@@ -13,7 +13,10 @@ const DOC_TYPES = [
   { key: "pool-rules", label: "Pool Rules (PDF)" },
   { key: "score-sheet", label: "Blank Score Sheet (PDF)" },
   { key: "schedule", label: "League Schedule (PDF)" },
+  { key: "team-captains", label: "Team Captains (PDF)" },
 ];
+// Doc types that are per-league (need the league picker).
+const PER_LEAGUE_DOCS = new Set(["schedule", "team-captains"]);
 // All five leagues — schedules are per-league.
 const ALL_LEAGUES = [
   { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
@@ -226,11 +229,11 @@ export default function AdminPage() {
           <p className="mt-2 text-sm text-smoke">
             <strong className="text-chalk">Pool Rules</strong> = the rulebook on the pool pages.{" "}
             <strong className="text-chalk">Blank Score Sheet</strong> = the empty sheet teams print.{" "}
-            <strong className="text-chalk">League Schedule</strong> = a league&rsquo;s season schedule (pick the league below).
+            <strong className="text-chalk">League Schedule</strong> and <strong className="text-chalk">Team Captains</strong> = per league (pick the league below).
           </p>
         </div>
 
-        {docType === "schedule" ? (
+        {PER_LEAGUE_DOCS.has(docType) ? (
           <div>
             <label htmlFor="scheduleLeague" className={labelClass}>Which league</label>
             <select id="scheduleLeague" value={scheduleLeague} onChange={(e) => { setScheduleLeague(e.target.value); setDocStatus(null); }} className={inputClass}>
