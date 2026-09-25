@@ -162,12 +162,14 @@ export default async function LeaguePage({ params }) {
 
   const captainsPdf = publicDocUrl(`docs/team-captains-${slug}.pdf`);
   const lastSeasonPdf = publicDocUrl(`docs/last-season-${slug}.pdf`);
+  const positionRoundPdf = publicDocUrl(`docs/position-round-${slug}.pdf`);
 
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
     { id: "players", label: "Player Stats", content: playersContent },
     { id: "last-season", label: "Last Season", content: lastSeasonPdf ? <PdfDoc url={lastSeasonPdf} title="Previous Season" note="Final standings & player stats from last season." /> : null },
     { id: "schedule", label: "Schedule", content: <PdfDoc url={`/docs/schedule-${slug}.pdf`} title="Season Schedule" note="Full season matchups and venues." /> },
+    { id: "position-round", label: "Position Round", content: positionRoundPdf ? <PdfDoc url={positionRoundPdf} title="Position Round" note="Position-round matchups." /> : null },
     { id: "captains", label: "Team Captains", content: captainsPdf ? <PdfDoc url={captainsPdf} title="Team Captains" note="Team captains and home-bar contacts." /> : null },
     { id: "rules", label: "Rules", content: rulesContent },
   ];

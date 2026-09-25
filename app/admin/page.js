@@ -15,9 +15,10 @@ const DOC_TYPES = [
   { key: "schedule", label: "League Schedule (PDF)" },
   { key: "team-captains", label: "Team Captains (PDF)" },
   { key: "last-season", label: "Previous Season Stats (PDF)" },
+  { key: "position-round", label: "Position Round (PDF)" },
 ];
 // Doc types that are per-league (need the league picker).
-const PER_LEAGUE_DOCS = new Set(["schedule", "team-captains", "last-season"]);
+const PER_LEAGUE_DOCS = new Set(["schedule", "team-captains", "last-season", "position-round"]);
 // All five leagues — schedules are per-league.
 const ALL_LEAGUES = [
   { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
@@ -230,7 +231,7 @@ export default function AdminPage() {
           <p className="mt-2 text-sm text-smoke">
             <strong className="text-chalk">Pool Rules</strong> = the rulebook on the pool pages.{" "}
             <strong className="text-chalk">Blank Score Sheet</strong> = the empty sheet teams print.{" "}
-            <strong className="text-chalk">League Schedule</strong>, <strong className="text-chalk">Team Captains</strong>, and <strong className="text-chalk">Previous Season Stats</strong> = per league (pick the league below).
+            <strong className="text-chalk">League Schedule</strong>, <strong className="text-chalk">Team Captains</strong>, <strong className="text-chalk">Previous Season Stats</strong>, and <strong className="text-chalk">Position Round</strong> = per league (pick the league below).
           </p>
         </div>
 

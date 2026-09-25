@@ -56,6 +56,7 @@ export async function POST(req) {
     schedule: (l) => ({ path: `public/docs/schedule-${l}.pdf`, label: `${l} schedule` }),
     "team-captains": (l) => ({ path: `public/docs/team-captains-${l}.pdf`, label: `${l} team captains` }),
     "last-season": (l) => ({ path: `public/docs/last-season-${l}.pdf`, label: `${l} previous-season stats` }),
+    "position-round": (l) => ({ path: `public/docs/position-round-${l}.pdf`, label: `${l} position round` }),
   };
 
   let doc;
