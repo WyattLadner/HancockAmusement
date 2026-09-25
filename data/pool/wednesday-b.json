@@ -1,6 +1,6 @@
 {
   "league": "Wednesday B Division Pool",
-  "updated": "2026-09-18",
+  "updated": "2026-09-25",
   "source": "admin-upload",
   "statsDeadline": "All stats must be turned in by Thursday 11:00 AM at Knock Knock.",
   "footnotes": [
@@ -17,34 +17,27 @@
   "standings": [
     {
       "team": "Ballistic Behavior",
-      "winPct": 68,
-      "played": 75,
-      "won": 51,
+      "winPct": 69,
+      "played": 80,
+      "won": 55,
       "notes": ""
     },
     {
       "team": "High Pockets",
-      "winPct": 64,
-      "played": 75,
-      "won": 48,
-      "notes": ""
-    },
-    {
-      "team": "Chalk Is Cheap",
-      "winPct": 55,
-      "played": 70,
-      "won": 38.5,
+      "winPct": 65,
+      "played": 80,
+      "won": 52,
       "notes": ""
     },
     {
       "team": "Breaking Bad",
       "winPct": 53,
-      "played": 75,
-      "won": 39.5,
+      "played": 80,
+      "won": 42.5,
       "notes": "*"
     },
     {
-      "team": "Kiln Billys",
+      "team": "Chalk Is Cheap",
       "winPct": 53,
       "played": 75,
       "won": 39.5,
@@ -58,17 +51,31 @@
       "notes": "**"
     },
     {
-      "team": "Kiln Vfw Post 6285",
+      "team": "Kiln Billys",
+      "winPct": 51,
+      "played": 80,
+      "won": 40.5,
+      "notes": ""
+    },
+    {
+      "team": "Kiss My 8 Ball",
       "winPct": 46,
-      "played": 70,
-      "won": 32.5,
+      "played": 80,
+      "won": 36.5,
+      "notes": "**"
+    },
+    {
+      "team": "Kiln Vfw Post 6285",
+      "winPct": 45,
+      "played": 75,
+      "won": 33.5,
       "notes": "*"
     },
     {
       "team": "Honey Bee's",
-      "winPct": 45,
-      "played": 75,
-      "won": 33.5,
+      "winPct": 44,
+      "played": 80,
+      "won": 35.5,
       "notes": ""
     },
     {
@@ -79,55 +86,48 @@
       "notes": "**"
     },
     {
-      "team": "Kiss My 8 Ball",
-      "winPct": 43,
-      "played": 75,
-      "won": 32.5,
-      "notes": "*"
-    },
-    {
       "team": "Rail Bums",
-      "winPct": 40,
-      "played": 75,
-      "won": 30,
+      "winPct": 41,
+      "played": 80,
+      "won": 33,
       "notes": ""
     },
     {
       "team": "Double D's Girls",
       "winPct": 39,
-      "played": 75,
-      "won": 29,
+      "played": 80,
+      "won": 31,
       "notes": "**"
     }
   ],
-  "week": 15,
+  "week": 16,
   "players": [
     {
       "team": "High Pockets",
       "players": [
         {
-          "name": "Vincent",
+          "name": "Vincent(8)",
           "winPct": 87,
-          "wins": 624,
-          "games": 720
+          "wins": 661,
+          "games": 760
         },
         {
           "name": "Bart(8)",
           "winPct": 84,
-          "wins": 536,
-          "games": 640
-        },
-        {
-          "name": "Liz",
-          "winPct": 83,
-          "wins": 399,
-          "games": 480
+          "wins": 569,
+          "games": 680
         },
         {
           "name": "Calvin",
           "winPct": 83,
-          "wins": 531,
-          "games": 640
+          "wins": 567,
+          "games": 680
+        },
+        {
+          "name": "Liz",
+          "winPct": 82,
+          "wins": 427,
+          "games": 520
         },
         {
           "name": "Mickey",
@@ -177,21 +177,21 @@
       "players": [
         {
           "name": "Robert H",
-          "winPct": 90,
-          "wins": 467,
-          "games": 520
+          "winPct": 89,
+          "wins": 501,
+          "games": 560
         },
         {
           "name": "Jim",
           "winPct": 85,
-          "wins": 643,
-          "games": 760
+          "wins": 677,
+          "games": 800
         },
         {
           "name": "Robert B(pappy)",
           "winPct": 79,
-          "wins": 504,
-          "games": 640
+          "wins": 534,
+          "games": 680
         },
         {
           "name": "Curt",
@@ -208,8 +208,8 @@
         {
           "name": "Keisha",
           "winPct": 59,
-          "wins": 95,
-          "games": 160
+          "wins": 117,
+          "games": 200
         }
       ]
     },
@@ -219,20 +219,20 @@
         {
           "name": "Aaron",
           "winPct": 84,
-          "wins": 674,
-          "games": 800
+          "wins": 705,
+          "games": 840
         },
         {
           "name": "Trey",
-          "winPct": 81,
-          "wins": 650,
-          "games": 800
+          "winPct": 82,
+          "wins": 686,
+          "games": 840
         },
         {
           "name": "Matt(8)",
-          "winPct": 80,
-          "wins": 579,
-          "games": 720
+          "winPct": 81,
+          "wins": 616,
+          "games": 760
         },
         {
           "name": "Jeff",
@@ -249,8 +249,8 @@
         {
           "name": "Lauren",
           "winPct": 71,
-          "wins": 565,
-          "games": 800
+          "wins": 597,
+          "games": 840
         }
       ]
     },
@@ -260,26 +260,26 @@
         {
           "name": "Jay(8)",
           "winPct": 80,
-          "wins": 639,
-          "games": 800
+          "wins": 676,
+          "games": 840
         },
         {
           "name": "Dwight",
           "winPct": 76,
-          "wins": 455,
-          "games": 600
+          "wins": 488,
+          "games": 640
         },
         {
           "name": "Tug",
-          "winPct": 74,
-          "wins": 475,
-          "games": 640
+          "winPct": 75,
+          "wins": 495,
+          "games": 660
         },
         {
           "name": "Trey",
           "winPct": 69,
-          "wins": 305,
-          "games": 440
+          "wins": 333,
+          "games": 480
         },
         {
           "name": "Doug",
@@ -290,8 +290,8 @@
         {
           "name": "David",
           "winPct": 58,
-          "wins": 173,
-          "games": 300
+          "wins": 187,
+          "games": 320
         }
       ]
     },
@@ -300,9 +300,9 @@
       "players": [
         {
           "name": "Sandy(8)",
-          "winPct": 81,
-          "wins": 644,
-          "games": 800
+          "winPct": 80,
+          "wins": 671,
+          "games": 840
         },
         {
           "name": "Rose",
@@ -311,16 +311,16 @@
           "games": 40
         },
         {
-          "name": "Angel",
-          "winPct": 68,
-          "wins": 488,
-          "games": 720
+          "name": "Melinda",
+          "winPct": 69,
+          "wins": 412,
+          "games": 600
         },
         {
-          "name": "Melinda",
+          "name": "Angel",
           "winPct": 68,
-          "wins": 381,
-          "games": 560
+          "wins": 520,
+          "games": 760
         },
         {
           "name": "Tim",
@@ -336,9 +336,9 @@
         },
         {
           "name": "Cheryl",
-          "winPct": 62,
-          "wins": 124,
-          "games": 200
+          "winPct": 63,
+          "wins": 150,
+          "games": 240
         }
       ]
     },
@@ -348,20 +348,20 @@
         {
           "name": "Pollock",
           "winPct": 89,
-          "wins": 426,
-          "games": 480
-        },
-        {
-          "name": "Dominic",
-          "winPct": 86,
-          "wins": 480,
-          "games": 560
+          "wins": 461,
+          "games": 520
         },
         {
           "name": "Joe",
           "winPct": 85,
-          "wins": 615,
-          "games": 720
+          "wins": 645,
+          "games": 760
+        },
+        {
+          "name": "Dominic",
+          "winPct": 84,
+          "wins": 501,
+          "games": 600
         },
         {
           "name": "Malone",
@@ -371,9 +371,9 @@
         },
         {
           "name": "Karla(8x2)",
-          "winPct": 72,
-          "wins": 521,
-          "games": 720
+          "winPct": 71,
+          "wins": 538,
+          "games": 760
         },
         {
           "name": "Jake",
@@ -401,8 +401,8 @@
         {
           "name": "Nathaniel",
           "winPct": 74,
-          "wins": 459,
-          "games": 620
+          "wins": 490,
+          "games": 660
         },
         {
           "name": "Tabatha",
@@ -413,8 +413,8 @@
         {
           "name": "Ken (oldman)",
           "winPct": 71,
-          "wins": 412,
-          "games": 580
+          "wins": 442,
+          "games": 620
         },
         {
           "name": "Ryan",
@@ -425,8 +425,8 @@
         {
           "name": "Barbarena",
           "winPct": 62,
-          "wins": 237,
-          "games": 380
+          "wins": 262,
+          "games": 420
         },
         {
           "name": "Michael R",
@@ -448,26 +448,26 @@
         {
           "name": "Ricky",
           "winPct": 83,
-          "wins": 380,
-          "games": 460
-        },
-        {
-          "name": "Scott",
-          "winPct": 81,
-          "wins": 114,
-          "games": 140
+          "wins": 416,
+          "games": 500
         },
         {
           "name": "Aaron(8)",
           "winPct": 80,
-          "wins": 526,
-          "games": 660
+          "wins": 557,
+          "games": 700
         },
         {
           "name": "Wesley",
           "winPct": 80,
-          "wins": 462,
-          "games": 580
+          "wins": 497,
+          "games": 620
+        },
+        {
+          "name": "Scott",
+          "winPct": 78,
+          "wins": 141,
+          "games": 180
         },
         {
           "name": "Alton",
@@ -494,9 +494,9 @@
         },
         {
           "name": "Lydell",
-          "winPct": 85,
-          "wins": 306,
-          "games": 360
+          "winPct": 84,
+          "wins": 335,
+          "games": 400
         },
         {
           "name": "Lee",
@@ -506,21 +506,21 @@
         },
         {
           "name": "Larry(rabbit)",
-          "winPct": 75,
-          "wins": 543,
-          "games": 720
+          "winPct": 76,
+          "wins": 575,
+          "games": 760
         },
         {
           "name": "Flo",
           "winPct": 73,
-          "wins": 584,
-          "games": 800
+          "wins": 611,
+          "games": 840
         },
         {
           "name": "Sibley",
           "winPct": 69,
-          "wins": 526,
-          "games": 760
+          "wins": 552,
+          "games": 800
         },
         {
           "name": "Chlaford",
@@ -541,27 +541,27 @@
         },
         {
           "name": "Terry",
-          "winPct": 84,
-          "wins": 668,
-          "games": 800
+          "winPct": 83,
+          "wins": 700,
+          "games": 840
         },
         {
           "name": "Dale(8)",
           "winPct": 79,
-          "wins": 630,
-          "games": 800
+          "wins": 661,
+          "games": 840
         },
         {
           "name": "Kebbler(8)",
           "winPct": 76,
-          "wins": 413,
-          "games": 540
+          "wins": 439,
+          "games": 580
         },
         {
           "name": "Junior(8)",
-          "winPct": 71,
-          "wins": 113,
-          "games": 160
+          "winPct": 66,
+          "wins": 131,
+          "games": 200
         }
       ]
     },
