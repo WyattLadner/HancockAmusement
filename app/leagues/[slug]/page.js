@@ -164,24 +164,29 @@ export default async function LeaguePage({ params }) {
 
   const isPool = league.type !== "darts";
 
-  // Darts rules render natively; pool rules are a Caleb-managed PDF.
-  const rules = getRules(slug);
-  const rulesContent = isPool ? (
-    <PdfDoc url="/docs/pool-rules.pdf" title="Pool League Rules" note="Maintained by Hancock Amusement — updated each season." />
-  ) : rules ? (
-    <RulesContent markdown={rules} />
-  ) : null;
-
+  // Caleb-managed PDFs in /public/docs. publicDocUrl adds a content-hash cache-buster
+  // so a freshly uploaded file isn't masked by Cloudflare/browser caching of a stable URL.
   const captainsPdf = publicDocUrl(`docs/team-captains-${slug}.pdf`);
   const lastSeasonPdf = publicDocUrl(`docs/last-season-${slug}.pdf`);
   const positionRoundPdf = publicDocUrl(`docs/position-round-${slug}.pdf`);
+  const schedulePdf = publicDocUrl(`docs/schedule-${slug}.pdf`) || `/docs/schedule-${slug}.pdf`;
+  const poolRulesPdf = publicDocUrl("docs/pool-rules.pdf") || "/docs/pool-rules.pdf";
+  const scoreSheetPdf = publicDocUrl("docs/pool-score-sheet.pdf") || "/docs/pool-score-sheet.pdf";
   const notice = notices[slug] || null;
+
+  // Darts rules render natively; pool rules are a Caleb-managed PDF.
+  const rules = getRules(slug);
+  const rulesContent = isPool ? (
+    <PdfDoc url={poolRulesPdf} title="Pool League Rules" note="Maintained by Hancock Amusement — updated each season." />
+  ) : rules ? (
+    <RulesContent markdown={rules} />
+  ) : null;
 
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
     { id: "players", label: "Player Stats", content: playersContent },
     { id: "last-season", label: "Last Season", content: lastSeasonPdf ? <PdfDoc url={lastSeasonPdf} title="Previous Season" note="Final standings & player stats from last season." /> : null },
-    { id: "schedule", label: "Schedule", content: <PdfDoc url={`/docs/schedule-${slug}.pdf`} title="Season Schedule" note="Full season matchups and venues." /> },
+    { id: "schedule", label: "Schedule", content: <PdfDoc url={schedulePdf} title="Season Schedule" note="Full season matchups and venues." /> },
     { id: "position-round", label: "Position Round", content: positionRoundPdf ? <PdfDoc url={positionRoundPdf} title="Position Round" note="Position-round matchups." /> : null },
     { id: "captains", label: "Team Captains", content: captainsPdf ? <PdfDoc url={captainsPdf} title="Team Captains" note="Team captains and home-bar contacts." /> : null },
     { id: "rules", label: "Rules", content: rulesContent },
@@ -198,7 +203,7 @@ export default async function LeaguePage({ params }) {
       {notice ? <LeagueNotice text={notice} /> : null}
       {isPool ? (
         <a
-          href="/docs/pool-score-sheet.pdf"
+          href={scoreSheetPdf}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-2 mb-8 rounded-md border border-line bg-surface px-4 py-2.5 text-sm font-display font-bold uppercase tracking-wide text-blue hover:border-red hover:text-red transition-colors duration-200 ${ring}`}
