@@ -11,6 +11,7 @@ import RulesContent from "@/components/RulesContent";
 import PdfDoc from "@/components/PdfDoc";
 import LeagueTabs from "@/components/LeagueTabs";
 import { site } from "@/lib/site";
+import notices from "@/data/leagues/notices.json";
 
 // Darts standings fetch the live LeagueLeader report; revalidate keeps them fresh
 // automatically. Schedule + rules are bundled static content.
@@ -93,6 +94,17 @@ function DartsFallback({ league }) {
   );
 }
 
+function LeagueNotice({ text }) {
+  return (
+    <div className="rounded-lg border border-line bg-surface px-5 md:px-6 py-4 mb-8 flex items-start gap-3">
+      <svg className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-blue mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+      <p className="text-sm md:text-base leading-relaxed">{text}</p>
+    </div>
+  );
+}
+
 function ComingSoon({ label }) {
   return (
     <div className="rounded-lg border border-line bg-surface p-10 text-center">
@@ -163,6 +175,7 @@ export default async function LeaguePage({ params }) {
   const captainsPdf = publicDocUrl(`docs/team-captains-${slug}.pdf`);
   const lastSeasonPdf = publicDocUrl(`docs/last-season-${slug}.pdf`);
   const positionRoundPdf = publicDocUrl(`docs/position-round-${slug}.pdf`);
+  const notice = notices[slug] || null;
 
   const tabs = [
     { id: "standings", label: "Standings", content: standings },
@@ -182,6 +195,7 @@ export default async function LeaguePage({ params }) {
       </h1>
       <p className="text-sm text-smoke mb-8">{metaLine}</p>
       {deadline}
+      {notice ? <LeagueNotice text={notice} /> : null}
       {isPool ? (
         <a
           href="/docs/pool-score-sheet.pdf"
