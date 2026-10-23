@@ -4,6 +4,7 @@ import { useState } from "react";
 import { parseScoreSheet, parsePlayers, isTeamTab } from "@/lib/poolParse";
 import PoolStandings from "@/components/PoolStandings";
 import PoolPlayers from "@/components/PoolPlayers";
+import currentNotices from "@/data/leagues/notices.json";
 
 const LEAGUES = [
   { key: "wednesday-a", label: "Wednesday A Division Pool" },
@@ -73,6 +74,12 @@ export default function AdminPage() {
   const [docFile, setDocFile] = useState(null);
   const [docStatus, setDocStatus] = useState(null);
   const [docBusy, setDocBusy] = useState(false);
+
+  // Per-league notice editor
+  const [noticeLeague, setNoticeLeague] = useState("tuesday-dart");
+  const [noticeText, setNoticeText] = useState(currentNotices["tuesday-dart"] || "");
+  const [noticeStatus, setNoticeStatus] = useState(null);
+  const [noticeBusy, setNoticeBusy] = useState(false);
 
   // LeagueLeader link updater (darts)
   const [reportLeague, setReportLeague] = useState("tuesday-dart");
@@ -147,6 +154,29 @@ export default function AdminPage() {
     }
   }
 
+  async function saveNotice(clear) {
+    if (!password) return setNoticeStatus({ type: "error", msg: "Enter the password first." });
+    const text = clear ? "" : noticeText.trim();
+    if (!clear && !text) return setNoticeStatus({ type: "error", msg: "Type a note first (or use Clear)." });
+    setNoticeBusy(true);
+    setNoticeStatus(null);
+    try {
+      const res = await fetch("/api/admin/notice", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ league: noticeLeague, password, text }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `Save failed (${res.status}).`);
+      if (clear) setNoticeText("");
+      setNoticeStatus({ type: "ok", msg: clear ? "Note cleared. The page updates in a minute or two." : "Note posted. It shows above the standings in a minute or two." });
+    } catch (err) {
+      setNoticeStatus({ type: "error", msg: err.message });
+    } finally {
+      setNoticeBusy(false);
+    }
+  }
+
   async function updateReport() {
     if (!reportUrl.trim()) return setReportStatus({ type: "error", msg: "Paste the League Leader link first." });
     if (!password) return setReportStatus({ type: "error", msg: "Enter the password first." });
@@ -180,8 +210,57 @@ export default function AdminPage() {
         <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className={`${inputClass} max-w-sm`} autoComplete="off" placeholder="••••••••" />
       </div>
 
+      {/* League notes */}
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4">League Notes</h2>
+      <div className={cardClass}>
+        <div>
+          <label htmlFor="noticeLeague" className={labelClass}>Which league</label>
+          <select
+            id="noticeLeague"
+            value={noticeLeague}
+            onChange={(e) => {
+              setNoticeLeague(e.target.value);
+              setNoticeText(currentNotices[e.target.value] || "");
+              setNoticeStatus(null);
+            }}
+            className={inputClass}
+          >
+            {ALL_LEAGUES.map((l) => <option key={l.slug} value={l.slug}>{l.label}</option>)}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="noticeText" className={labelClass}>Note (shows at the top of the league page)</label>
+          <textarea
+            id="noticeText"
+            value={noticeText}
+            onChange={(e) => { setNoticeText(e.target.value); setNoticeStatus(null); }}
+            rows={3}
+            maxLength={280}
+            className={`${inputClass} resize-y`}
+            placeholder="e.g. Banquet will be held at Railroad Sports Bar on November 3rd at 7:00."
+          />
+          <p className="mt-2 text-sm text-smoke">
+            Leave it blank and press <strong className="text-chalk">Clear note</strong> to take the note down. One short note per league.
+          </p>
+        </div>
+        <Status status={noticeStatus} />
+        <div className="flex flex-wrap gap-3">
+          <button type="button" onClick={() => saveNotice(false)} disabled={noticeBusy} className={btnClass}>
+            {noticeBusy ? "Saving…" : "Post note →"}
+          </button>
+          <button
+            type="button"
+            onClick={() => saveNotice(true)}
+            disabled={noticeBusy}
+            className="inline-flex items-center justify-center bg-surface text-chalk border border-line font-display font-bold uppercase tracking-wide rounded-md px-6 py-3.5 hover:border-red transition-colors duration-200 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red"
+          >
+            Clear note
+          </button>
+        </div>
+      </div>
+
       {/* Standings */}
-      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4">Standings &amp; Player Stats</h2>
+      <h2 className="font-display font-bold uppercase tracking-wide text-2xl mb-4 mt-16">Standings &amp; Player Stats</h2>
       <div className={cardClass}>
         <div>
           <label htmlFor="league" className={labelClass}>Division</label>
