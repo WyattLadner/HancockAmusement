@@ -1,6 +1,6 @@
 {
   "league": "Wednesday B Division Pool",
-  "updated": "2026-10-22",
+  "updated": "2026-10-26",
   "source": "admin-upload",
   "statsDeadline": "All stats must be turned in by Thursday 11:00 AM at Knock Knock.",
   "footnotes": [
@@ -17,16 +17,16 @@
   "standings": [
     {
       "team": "Ballistic Behavior",
-      "winPct": 69,
+      "winPct": 66,
       "played": 100,
-      "won": 69,
+      "won": 66,
       "notes": ""
     },
     {
       "team": "High Pockets",
-      "winPct": 61,
+      "winPct": 64,
       "played": 100,
-      "won": 60.5,
+      "won": 63.5,
       "notes": "*"
     },
     {
