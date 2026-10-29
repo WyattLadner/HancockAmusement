@@ -46,6 +46,7 @@ As team captain you will be expected to:
 
 ### Forfeits
 
+- If a team forfeits 2 matches they are dropped from the league.
 - If a team is later than 15 minutes after the scheduled league start time (real time not bar time) the team captain has three options: 1: Forfeit the opposing team 2: Reschedule the match 3: Allow more time for the opposing team to show up
 - If no contact is able to be made with the opposing team, the team captain can choose to have the league coordinator try to contact the other team to set up a rescheduled match or receive a forfeit. Dropping out of league If a team drops out of a league, they will be removed from the schedule. All games played by the team dropping out will be removed from the standings. A team that drops out of a league will receive one warning, if the team joins another league and drops out again, they will not be allowed to play in any Hancock Amusement league for a period of 1 year. Travel
 
