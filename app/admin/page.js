@@ -22,7 +22,7 @@ const DOC_TYPES = [
 const PER_LEAGUE_DOCS = new Set(["schedule", "team-captains", "last-season", "position-round"]);
 // All five leagues — schedules are per-league.
 const ALL_LEAGUES = [
-  { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
+  { slug: "remote-monday-cash", label: "Singles Flex League" },
   { slug: "tuesday-dart", label: "Tuesday Dart League" },
   { slug: "wednesday-a-pool", label: "Wednesday A Division Pool" },
   { slug: "wednesday-b-pool", label: "Wednesday B Division Pool" },
@@ -30,7 +30,7 @@ const ALL_LEAGUES = [
 ];
 // Darts leagues only — their standings come from a LeagueLeader link that changes each season.
 const DARTS_LEAGUES = [
-  { slug: "remote-monday-cash", label: "Remote Monday Cash League" },
+  { slug: "remote-monday-cash", label: "Singles Flex League" },
   { slug: "tuesday-dart", label: "Tuesday Dart League" },
   { slug: "remote-thursday-cash", label: "Remote Thursday Cash League" },
 ];
