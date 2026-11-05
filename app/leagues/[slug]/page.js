@@ -169,6 +169,7 @@ export default async function LeaguePage({ params }) {
   const captainsPdf = publicDocUrl(`docs/team-captains-${slug}.pdf`);
   const lastSeasonPdf = publicDocUrl(`docs/last-season-${slug}.pdf`);
   const positionRoundPdf = publicDocUrl(`docs/position-round-${slug}.pdf`);
+  const flexRulesPdf = publicDocUrl(`docs/flex-rules-${slug}.pdf`);
   const schedulePdf = publicDocUrl(`docs/schedule-${slug}.pdf`) || `/docs/schedule-${slug}.pdf`;
   const poolRulesPdf = publicDocUrl("docs/pool-rules.pdf") || "/docs/pool-rules.pdf";
   const scoreSheetPdf = publicDocUrl("docs/pool-score-sheet.pdf") || "/docs/pool-score-sheet.pdf";
@@ -189,6 +190,7 @@ export default async function LeaguePage({ params }) {
     { id: "schedule", label: "Schedule", content: <PdfDoc url={schedulePdf} title="Season Schedule" note="Full season matchups and venues." /> },
     { id: "position-round", label: "Position Round", content: positionRoundPdf ? <PdfDoc url={positionRoundPdf} title="Position Round" note="Position-round matchups." /> : null },
     { id: "captains", label: "Team Captains", content: captainsPdf ? <PdfDoc url={captainsPdf} title="Team Captains" note="Team captains and home-bar contacts." /> : null },
+    { id: "flex-rules", label: "Flex Specific Rules", content: flexRulesPdf ? <PdfDoc url={flexRulesPdf} title="Flex Specific Rules" note="Rules specific to this league." /> : null },
     { id: "rules", label: "Rules", content: rulesContent },
   ];
 
