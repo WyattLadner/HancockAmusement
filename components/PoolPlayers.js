@@ -14,9 +14,6 @@ export default function PoolPlayers({ teams = [] }) {
               <li key={p.name + i} className="px-4 md:px-5 py-2.5 flex items-center justify-between gap-3">
                 <span className="text-sm md:text-base text-chalk">{p.name}</span>
                 <span className="flex items-baseline gap-3 flex-shrink-0 tabular-nums">
-                  {p.games ? (
-                    <span className="text-xs text-smoke">{p.wins}/{p.games}</span>
-                  ) : null}
                   <span className="font-display font-bold text-red text-base md:text-lg w-12 text-right">{p.winPct}%</span>
                 </span>
               </li>
