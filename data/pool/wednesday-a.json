@@ -1,6 +1,6 @@
 {
   "league": "Wednesday A Division Pool",
-  "updated": "2026-11-05",
+  "updated": "2026-11-13",
   "source": "admin-upload",
   "statsDeadline": "All stats must be turned in by Thursday 11:00 AM at Knock Knock.",
   "footnotes": [
@@ -44,13 +44,6 @@
       "notes": "*"
     },
     {
-      "team": "Shooting Blanks",
-      "winPct": 52,
-      "played": 110,
-      "won": 57,
-      "notes": ""
-    },
-    {
       "team": "Miller Time",
       "winPct": 52,
       "played": 110,
@@ -58,10 +51,17 @@
       "notes": ""
     },
     {
+      "team": "Shooting Blanks",
+      "winPct": 51,
+      "played": 110,
+      "won": 56.5,
+      "notes": ""
+    },
+    {
       "team": "Back Side",
       "winPct": 51,
       "played": 110,
-      "won": 56,
+      "won": 56.5,
       "notes": ""
     },
     {
@@ -72,18 +72,18 @@
       "notes": ""
     },
     {
-      "team": "Shot In The Dark",
-      "winPct": 32,
-      "played": 110,
-      "won": 35.5,
-      "notes": "**"
-    },
-    {
       "team": "8 In The Hole",
       "winPct": 34,
       "played": 110,
       "won": 37,
       "notes": "*"
+    },
+    {
+      "team": "Shot In The Dark",
+      "winPct": 32,
+      "played": 110,
+      "won": 35.5,
+      "notes": "**"
     }
   ],
   "week": 22,
